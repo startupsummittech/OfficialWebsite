@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup Summit 1.0 | The Innovation Nexus</title>
+    <title>Startup Summit 1.0 | Innovate for tomorrow</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Personality-Rich Font Stack for Startup Summit -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -18,26 +22,94 @@
             --bg-card: #1A1A24;
             --bg-card-transparent: rgba(26, 26, 36, 0.5);
             --border-color: rgba(255, 255, 255, 0.15);
-            --text-primary: #F0F2F5;
-            --text-secondary: #a0a8b3;
+            --text-primary: #FEFEFE;
+            --text-secondary: #B8BCC6;
+            --text-tertiary: #9CA3AF;
+            --text-muted: #6B7280;
             --accent-1: #3874FF;
             --accent-2: #8E44AD;
             --accent-3: #E91E63;
-            --font-main: 'Inter', sans-serif;
+            /* Personality-Rich Font System for Startup Innovation */
+            --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            --font-tech: 'Orbitron', 'Space Grotesk', monospace;
+            
+            /* Legacy fallback */
+            --font-main: var(--font-body);
             --shadow: 0px 8px 32px rgba(0, 0, 0, 0.2);
             --gradient-aurora: conic-gradient(from 180deg at 50% 50%, #3874FF 0%, #8E44AD 50%, #E91E63 100%);
             --gradient-button: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
+            
+            /* Enhanced Typography Scale - Based on Perfect Fourth (1.333) */
+            --text-xs: clamp(0.75rem, 0.69rem + 0.28vw, 0.84rem);
+            --text-sm: clamp(0.875rem, 0.81rem + 0.33vw, 0.94rem);
+            --text-base: clamp(1rem, 0.93rem + 0.37vw, 1.06rem);
+            --text-lg: clamp(1.125rem, 1.04rem + 0.42vw, 1.19rem);
+            --text-xl: clamp(1.25rem, 1.15rem + 0.47vw, 1.31rem);
+            --text-2xl: clamp(1.5rem, 1.37rem + 0.63vw, 1.69rem);
+            --text-3xl: clamp(1.875rem, 1.69rem + 0.93vw, 2.25rem);
+            --text-4xl: clamp(2.25rem, 1.99rem + 1.31vw, 3rem);
+            --text-5xl: clamp(3rem, 2.65rem + 1.75vw, 4rem);
+            --text-6xl: clamp(3.75rem, 3.19rem + 2.81vw, 5.63rem);
+            
+            /* Line Heights for Optimal Readability */
+            --leading-none: 1;
+            --leading-tight: 1.25;
+            --leading-snug: 1.375;
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.625;
+            --leading-loose: 2;
+            
+            /* Letter Spacing for Better Typography */
+            --tracking-tighter: -0.05em;
+            --tracking-tight: -0.025em;
+            --tracking-normal: 0em;
+            --tracking-wide: 0.025em;
+            --tracking-wider: 0.05em;
+            --tracking-widest: 0.1em;
+            
+            /* Optimal Reading Measures */
+            --measure-narrow: 20ch;
+            --measure-base: 65ch;
+            --measure-wide: 75ch;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        
+        html { 
+            scroll-behavior: smooth;
+            text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        
         body {
-            font-family: var(--font-main);
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            font-weight: 400;
+            line-height: var(--leading-normal);
+            letter-spacing: var(--tracking-normal);
             background-color: var(--bg-main);
             color: var(--text-primary);
             overflow-x: hidden;
+            
+            /* Enhanced Text Rendering for Premium Feel */
             -webkit-font-smoothing: antialiased;
-            font-weight: 400;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-optical-sizing: auto;
+            
+            /* OpenType Features for Better Typography */
+            font-feature-settings: 
+                "kern" 1,           /* Kerning */
+                "liga" 1,           /* Standard ligatures */
+                "clig" 1,           /* Contextual ligatures */
+                "calt" 1,           /* Contextual alternates */
+                "cv01" 1,           /* Character variants */
+                "ss01" 1;           /* Stylistic sets */
+            
+            font-variant-ligatures: common-ligatures contextual;
+            font-variant-numeric: proportional-nums;
         }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-main); }
@@ -55,14 +127,56 @@
         }
         #aurora-blob {
             background: var(--gradient-aurora);
-            height: 400px; aspect-ratio: 1; position: absolute; left: 50%; top: 50%;
+            height: 400px; aspect-ratio: 1; position: fixed; left: 50%; top: 50%;
             transform: translate(-50%, -50%); border-radius: 50%;
-            filter: blur(120px); z-index: 0; opacity: 0.5; pointer-events: none;
+            filter: blur(120px); z-index: 1001; opacity: 0.5; pointer-events: none;
             transition: all 0.3s ease;
         }
-        .hero-content { position: relative; z-index: 1; text-align: center; padding: 2rem; }
-        .hero-title { font-size: clamp(3rem, 10vw, 6.5rem); font-weight: 900; letter-spacing: -0.05em; line-height: 1; margin-bottom: 1rem; }
-        .hero-subtitle { font-size: clamp(1.1rem, 3vw, 1.3rem); color: var(--text-secondary); max-width: 60ch; margin: 0 auto 2.5rem; line-height: 1.6; }
+        .hero-content { 
+            position: relative; 
+            z-index: 1; 
+            text-align: center; 
+            padding: 2rem;
+            max-width: var(--measure-wide);
+            margin: 0 auto;
+        }
+        
+        .hero-title { 
+            font-family: var(--font-display);
+            font-size: var(--text-6xl); 
+            font-weight: 700; 
+            letter-spacing: var(--tracking-tighter); 
+            line-height: var(--leading-none); 
+            margin-bottom: 0.75rem;
+            text-wrap: balance;
+            font-feature-settings: "ss01" 1, "ss02" 1, "cv01" 1;
+            /* Space Grotesk personality features */
+            font-variant-caps: normal;
+        }
+        
+        .hero-sub-title { 
+            font-family: var(--font-tech);
+            font-size: var(--text-4xl); 
+            font-weight: 600; 
+            letter-spacing: var(--tracking-normal); 
+            line-height: var(--leading-tight); 
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            text-wrap: balance;
+            text-transform: uppercase;
+            /* Orbitron futuristic feel for tagline */
+            font-feature-settings: "ss01" 1;
+        }
+        
+        .hero-subtitle { 
+            font-size: var(--text-lg); 
+            color: var(--text-secondary); 
+            max-width: var(--measure-base); 
+            margin: 0 auto 2.5rem; 
+            line-height: var(--leading-relaxed);
+            font-weight: 400;
+            text-wrap: pretty;
+        }
         .hero-cta { margin-top: 2rem; }
 
         /* GENERAL & UI */
@@ -71,16 +185,48 @@
         .page.active { display: block; animation: fadeIn 1s forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        .section-title { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; text-align: center; letter-spacing: -0.04em; margin-bottom: 1rem; }
-        .section-title span { background: linear-gradient(90deg, var(--accent-1), var(--accent-3)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .section-subtitle { max-width: 65ch; text-align: center; margin: 0 auto 4rem; color: var(--text-secondary); line-height: 1.7; font-size: 1.15rem; }
+        .section-title { 
+            font-family: var(--font-display);
+            font-size: var(--text-5xl); 
+            font-weight: 600; 
+            text-align: center; 
+            letter-spacing: var(--tracking-tight); 
+            line-height: var(--leading-tight);
+            margin-bottom: 1.5rem;
+            text-wrap: balance;
+            /* Space Grotesk distinctive features */
+            font-feature-settings: "ss01" 1, "ss02" 1, "cv01" 1;
+        }
+        
+        .section-title span { 
+            background: linear-gradient(90deg, var(--accent-1), var(--accent-3)); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            color: transparent; 
+        }
+        
+        .section-subtitle { 
+            font-size: var(--text-xl); 
+            max-width: var(--measure-base); 
+            text-align: center; 
+            margin: 0 auto 4rem; 
+            color: var(--text-secondary); 
+            line-height: var(--leading-relaxed);
+            font-weight: 400;
+            text-wrap: pretty;
+        }
 
-        /* --- FINAL BUTTON STYLE (GRADIENT ON HOVER) --- */
+        /* --- PERSONALITY-RICH BUTTON TYPOGRAPHY --- */
         .btn {
             padding: 1rem 2.5rem;
             border-radius: 50px;
+            font-family: var(--font-body);
+            font-size: var(--text-base);
             font-weight: 600;
+            letter-spacing: var(--tracking-wider);
+            line-height: var(--leading-none);
             text-decoration: none;
+            text-transform: uppercase;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -89,8 +235,10 @@
             color: var(--text-primary);
             background: transparent;
             border: 1px solid var(--border-color);
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            /* Outfit button personality */
+            font-feature-settings: "ss01" 1, "cv01" 1;
         }
         .btn:hover {
             background: var(--gradient-button);
@@ -101,30 +249,73 @@
 
         /* NAVIGATION */
         .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.5rem 5%; transition: background 0.3s ease; }
-        .navbar.scrolled { background: rgba(11, 11, 18, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .navbar.scrolled { background: transparent; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
          .nav-logo { 
-             font-weight: 800; 
-             font-size: 1.5rem; 
+             font-family: var(--font-display);
+             font-weight: 700; 
+             font-size: var(--text-2xl); 
              text-decoration: none; 
              color: var(--text-primary); 
-             letter-spacing: -0.05em; 
+             letter-spacing: var(--tracking-tight);
+             line-height: var(--leading-none);
+             /* Space Grotesk brand personality */
+             font-feature-settings: "ss01" 1, "ss02" 1;
         }
          .nav-logo img {
-             height: 75px;
+             height: 80px;
+             margin-bottom: 5px;
              width: auto;
          }
         .nav-links { display: flex; list-style: none; gap: 2rem; }
-        .nav-link { color: var(--text-secondary); text-decoration: none; font-weight: 500; position: relative; transition: color 0.3s ease; }
+        .nav-link { 
+            color: var(--text-secondary); 
+            text-decoration: none; 
+            font-size: var(--text-base);
+            font-weight: 500; 
+            letter-spacing: var(--tracking-normal);
+            line-height: var(--leading-none);
+            position: relative; 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-feature-settings: "case" 1;
+        }
         .nav-link:hover { color: var(--text-primary); }
         .nav-link.active { color: var(--text-primary); font-weight: 600; }
         .nav-link.active::after { content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--accent-1); }
 
         /* CARD WITH GLOWING BORDER */
         .card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: var(--text-primary); }
-        .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 16px; padding: 1px; background: var(--gradient-aurora); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; opacity: 0; transition: opacity 0.4s ease; }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 16px; padding: 1px; background: var(--gradient-aurora); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; opacity: 0; transition: opacity 0.4s ease; pointer-events: none; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
         .card:hover::before { opacity: 1; }
+
+        /* KNOW MORE BUTTON STYLES */
+        .know-more-btn {
+            background: linear-gradient(45deg, var(--accent-1), var(--accent-2));
+            border: none;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
+        }
+        .know-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(86, 116, 255, 0.4);
+            background: linear-gradient(45deg, var(--accent-2), var(--accent-1));
+        }
+        .know-more-btn:active {
+            transform: translateY(0);
+        }
 
        /* --- WHY ATTEND SECTION & METRICS (CORRECTED LAYOUT) --- */
         .features-grid {
@@ -132,20 +323,71 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 2rem;
+            align-items: stretch; /* Make all cards same height */
         }
 
         .features-grid .feature-card {
             text-align: center;
             flex: 0 1 350px; /* This controls the card size */
+            display: flex;
+            flex-direction: column;
         }
 
-.feature-card .icon { font-size: 2rem; color: var(--accent-1); margin-bottom: 1.5rem; }
-.feature-card h3 { font-size: 1.4rem; margin-bottom: 0.75rem; font-weight: 700;}
-.feature-card p { color: var(--text-secondary); line-height: 1.6; font-size: 1rem; }
+.feature-card .icon { 
+    font-size: 2.5rem; 
+    color: var(--accent-1); 
+    margin-bottom: 1.5rem; 
+}
+
+.feature-card h3 { 
+    font-size: var(--text-2xl); 
+    margin-bottom: 1rem; 
+    font-weight: 700;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-normal);
+    text-wrap: balance;
+}
+
+.feature-card p { 
+    color: var(--text-secondary); 
+    line-height: var(--leading-relaxed); 
+    font-size: var(--text-base);
+    text-wrap: pretty;
+    max-width: var(--measure-narrow);
+    margin: 0 auto;
+}
   
-.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; }
-.metric-item h3 { font-size: 3.5rem; font-weight: 800; background: linear-gradient(90deg, var(--accent-1), var(--accent-3)); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.1; letter-spacing: -0.03em; }
-.metric-item p { text-transform: uppercase; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.08em; font-size: 0.9rem;}
+.metrics-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 2rem; 
+    text-align: center; 
+}
+
+.metric-item h3 { 
+    font-family: var(--font-tech);
+    font-size: var(--text-5xl); 
+    font-weight: 700; 
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-3)); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+    line-height: var(--leading-none); 
+    letter-spacing: var(--tracking-normal);
+    /* Orbitron futuristic feel for metrics */
+    font-feature-settings: "tnum" 1, "ss01" 1;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.metric-item p { 
+    text-transform: uppercase; 
+    font-weight: 600; 
+    color: var(--text-tertiary); 
+    letter-spacing: var(--tracking-widest); 
+    font-size: var(--text-sm);
+    font-feature-settings: "case" 1;
+}
 
 
         /* SCHEDULE WITH TABS & TIMELINE */
@@ -157,9 +399,15 @@
             border: 1px solid var(--border-color);
             border-radius: 50px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: var(--font-mono);
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: var(--text-sm);
+            letter-spacing: var(--tracking-wide);
+            line-height: var(--leading-none);
+            text-transform: uppercase;
+            /* JetBrains Mono for tech UI elements */
+            font-feature-settings: "case" 1, "ss01" 1;
         }
         .filter-btn:hover {
             color: var(--text-primary);
@@ -224,9 +472,36 @@
 
         .schedule-timeline-content { padding-top: 1.5rem; padding-bottom: 1.5rem; }
         .schedule-timeline-content .card { padding: 1.5rem; }
-        .schedule-timeline-content h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.25rem; }
-        .schedule-timeline-content p { color: var(--text-secondary); font-size: 0.9rem; }
-        .schedule-timeline-tag { font-size: 0.8rem; font-weight: 600; color: var(--accent-3); margin-bottom: 0.5rem; display: inline-block; letter-spacing: 0.05em; text-transform: uppercase;}
+        
+        .schedule-timeline-content h3 { 
+            font-size: var(--text-xl); 
+            font-weight: 600; 
+            margin-bottom: 0.75rem;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-normal);
+            text-wrap: balance;
+        }
+        
+        .schedule-timeline-content p { 
+            color: var(--text-secondary); 
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+            margin-bottom: 0.5rem;
+            text-wrap: pretty;
+        }
+        
+        .schedule-timeline-tag { 
+            font-family: var(--font-mono);
+            font-size: var(--text-xs); 
+            font-weight: 500; 
+            color: var(--accent-3); 
+            margin-bottom: 0.75rem; 
+            display: inline-block; 
+            letter-spacing: var(--tracking-widest); 
+            text-transform: uppercase;
+            /* JetBrains Mono for tech tags */
+            font-feature-settings: "case" 1, "ss01" 1;
+        }
 
         /* SPEAKERS, TEAM, GALLERY */
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
@@ -251,13 +526,38 @@
             box-shadow: 0 4px 15px rgba(56, 116, 255, 0.3);
         }
         .person-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-        .person-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.25rem; line-height: 1.3; }
-        .person-card p { color: var(--accent-1); font-weight: 500; font-size: 0.9rem; }
+        
+        .person-card h3 { 
+            font-size: var(--text-lg); 
+            font-weight: 600; 
+            margin-bottom: 0.5rem; 
+            line-height: var(--leading-snug);
+            letter-spacing: var(--tracking-normal);
+            text-wrap: balance;
+        }
+        
+        .person-card p { 
+            color: var(--accent-1); 
+            font-weight: 500; 
+            font-size: var(--text-sm);
+            letter-spacing: var(--tracking-normal);
+            line-height: var(--leading-normal);
+        }
         
         #committee-faculty .person-card { padding: 1rem; }
         #committee-faculty .person-card .img-wrapper { width: 130px; margin-bottom: 0.75rem; }
-        #committee-faculty .person-card h3 { font-size: 1.1rem; margin-bottom: 0.15rem; }
-        #committee-faculty .person-card p { font-size: 0.85rem; }
+        
+        #committee-faculty .person-card h3 { 
+            font-size: var(--text-base); 
+            margin-bottom: 0.25rem;
+            line-height: var(--leading-snug);
+            letter-spacing: var(--tracking-normal);
+        }
+        
+        #committee-faculty .person-card p { 
+            font-size: var(--text-sm);
+            letter-spacing: var(--tracking-normal);
+        }
         
         /* --- REGISTRATION HUB --- */
                 
@@ -279,16 +579,37 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
+            position: relative;
+            z-index: 5;
+            height: 100%;
+        }
+
+        .card-content-main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content .know-more-btn {
+            margin-top: auto; /* Push button to bottom */
+            align-self: center;
         }
         .card-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
+            font-size: var(--text-2xl);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-normal);
+            text-wrap: balance;
         }
+        
         .card-content p {
             color: var(--text-secondary);
-            line-height: 1.6;
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
             margin-bottom: 1.5rem;
             flex-grow: 1;
+            text-wrap: pretty;
         }
         .register-link {
             display: flex;
@@ -318,16 +639,26 @@
         }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto 3rem; text-align: left; }
         .footer-col h4 {
-            font-size: 1.3rem;
+            font-size: var(--text-xl);
             margin-bottom: 1.5rem;
             font-weight: 700;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-normal);
             background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             display: inline-block;
+            font-feature-settings: "ss02" 1;
         }
-        .footer-col p, .footer-col li { color: var(--text-secondary); margin-bottom: 0.75rem; font-size: 1rem; }
+        
+        .footer-col p, .footer-col li { 
+            color: var(--text-secondary); 
+            margin-bottom: 0.75rem; 
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+            letter-spacing: var(--tracking-normal);
+        }
         .footer-col ul { list-style: none; }
         .footer-col a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease; }
         .footer-col a:hover { color: var(--accent-1); }
@@ -373,13 +704,19 @@
             display: grid;
         }
 
-        /* Subheadings like "Convenors" */
+        /* Subheadings like "Convenors" - Enhanced with Personality */
         .committee-subheading {
+            font-family: var(--font-display);
             text-align: center;
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: var(--text-3xl);
+            font-weight: 600;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-tight);
             margin-bottom: 2rem;
             color: var(--text-primary);
+            text-wrap: balance;
+            /* Space Grotesk personality for structure */
+            font-feature-settings: "ss01" 1, "ss02" 1, "cv01" 1;
         }
 
         /* Faculty container now stacks its boxes */
@@ -527,23 +864,37 @@
             font-weight: 500;
             margin-bottom: 2rem;
             transition: color 0.3s ease;
+            position: relative;
+            z-index: 100;
+            cursor: pointer;
+            pointer-events: auto;
         }
         .back-link:hover {
             color: var(--accent-1);
         }
         .event-title {
-            font-size: clamp(3rem, 6vw, 4.5rem);
-            font-weight: 900;
-            margin-bottom: 0.5rem;
+            font-family: var(--font-display);
+            font-size: var(--text-6xl);
+            font-weight: 700;
+            line-height: var(--leading-none);
+            letter-spacing: var(--tracking-tighter);
+            margin-bottom: 1rem;
             background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            text-wrap: balance;
+            /* Space Grotesk impact for event titles */
+            font-feature-settings: "ss01" 1, "ss02" 1, "cv01" 1;
         }
+        
         .event-subtitle {
-            font-size: 1.5rem;
+            font-size: var(--text-2xl);
             color: var(--text-secondary);
             font-weight: 500;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-normal);
+            text-wrap: balance;
         }
 
         .event-content {
@@ -555,15 +906,26 @@
             margin-bottom: 4rem;
         }
         .event-overview h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-family: var(--font-display);
+            font-size: var(--text-4xl);
+            font-weight: 600;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-tight);
+            margin-bottom: 2rem;
             color: var(--text-primary);
+            text-wrap: balance;
+            /* Space Grotesk consistency for headings */
+            font-feature-settings: "ss01" 1, "ss02" 1;
         }
+        
         .event-overview p {
-            font-size: 1.2rem;
-            line-height: 1.7;
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
             color: var(--text-secondary);
-            text-align:center;
+            text-align: center;
+            max-width: var(--measure-base);
+            margin: 0 auto 1.5rem;
+            text-wrap: pretty;
         }
 
         .event-details-grid {
@@ -589,23 +951,38 @@
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
-            font-size: 1.2rem;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-normal);
             margin-bottom: 1rem;
             color: var(--accent-1);
+            text-wrap: balance;
         }
+        
         .detail-card p {
             color: var(--text-secondary);
+            font-size: var(--text-base);
+            line-height: var(--leading-normal);
             margin-bottom: 0.5rem;
+            text-wrap: pretty;
         }
 
         .event-highlights, .event-tools, .event-modules {
             margin-bottom: 4rem;
         }
         .event-highlights h2, .event-tools h2, .event-modules h2 {
-            font-size: 2rem;
+            font-family: var(--font-display);
+            font-size: var(--text-4xl);
+            font-weight: 600;
             text-align: center;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-tight);
             margin-bottom: 2rem;
             color: var(--text-primary);
+            text-wrap: balance;
+            /* Space Grotesk for section headings */
+            font-feature-settings: "ss01" 1, "ss02" 1;
         }
         .highlights-grid, .tools-grid, .modules-grid {
             display: grid;
@@ -630,13 +1007,20 @@
             margin-bottom: 1.5rem;
         }
         .highlight-item h4, .tool-item h4, .module-item h4 {
-            font-size: 1.3rem;
+            font-size: var(--text-xl);
+            font-weight: 600;
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-normal);
             margin-bottom: 1rem;
             color: var(--text-primary);
+            text-wrap: balance;
         }
+        
         .highlight-item p, .tool-item p, .module-item p {
             color: var(--text-secondary);
-            line-height: 1.6;
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+            text-wrap: pretty;
         }
 
         .event-agenda, .event-timeline {
@@ -857,6 +1241,72 @@
             box-shadow: 0 8px 25px rgba(56, 116, 255, 0.5);
         }
 
+        /* BROCHURE MODAL STYLES */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            background: transparent;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: scaleIn 0.3s ease-out;
+        }
+        .modal-image {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .close-modal:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
         /* Mobile Responsive for Event Pages */
         @media (max-width: 768px) {
             .event-details-grid {
@@ -889,7 +1339,7 @@
             }
         }
 
-        /* HAMBURGER MENU STYLES */
+        /* ENHANCED HAMBURGER MENU STYLES */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -899,8 +1349,14 @@
             background: transparent;
             border: none;
             cursor: pointer;
-            padding: 0;
-            z-index: 1001;
+            padding: 4px;
+            z-index: 1003;
+            position: relative;
+            /* Ensure visibility */
+            opacity: 1;
+            visibility: visible;
+            /* Fix mobile sizing */
+            margin-right: 0.5rem;
         }
         .hamburger span {
             display: block;
@@ -949,10 +1405,15 @@
             animation: slideInUp 0.6s ease-out 0.2s both;
         }
         .mobile-menu .nav-link {
+            font-family: var(--font-display);
             font-size: 1.6rem;
             font-weight: 600;
+            letter-spacing: var(--tracking-wide);
+            text-transform: uppercase;
             transition: all 0.3s ease;
             position: relative;
+            /* Space Grotesk personality for nav */
+            font-feature-settings: "ss01" 1, "cv01" 1;
         }
         .mobile-menu .nav-link:hover {
             color: var(--accent-1);
@@ -988,41 +1449,53 @@
             display: flex;
         }
 
-         /* MOBILE RESPONSIVE STYLES */
+         /* ENHANCED MOBILE RESPONSIVE STYLES */
          @media (max-width: 768px) {
              /* Navigation */
              .hamburger {
-                 display: flex;
+                 display: flex !important;
+                 z-index: 1003;
+                 position: relative;
              }
              .desktop-nav, .desktop-register {
-                 display: none;
+                 display: none !important;
              }
              .nav-container {
-                 padding: 0;
-                 height: 100%;
+                 padding: 0 1rem;
+                 height: 60px;
                  display: flex;
                  justify-content: space-between;
                  align-items: center;
                  width: 100%;
+                 position: relative;
+                 max-width: 100%;
              }
              .navbar {
-                 padding: 1rem clamp(1rem, 5%, 2rem);
+                 padding: 0.5rem clamp(1rem, 5%, 2rem);
                  background: rgba(11, 11, 18, 0.95);
                  backdrop-filter: blur(20px);
                  -webkit-backdrop-filter: blur(20px);
                  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                 height: 70px; /* Optimized height for mobile */
+                 height: 60px;
+                 z-index: 1000;
+                 min-height: 60px;
              }
              
              /* Mobile logo styling */
+             .nav-logo {
+                 flex-shrink: 0;
+                 display: flex;
+                 align-items: center;
+             }
              .nav-logo img {
-                 height: 50px !important;
+                 height: 40px !important;
                  width: auto;
+                 max-width: 150px;
              }
              
              /* Fix navbar overlap - add proper spacing */
              .hero {
-                 padding-top: 70px; /* Account for fixed navbar */
+                 padding-top: 60px; /* Account for fixed navbar */
              }
              
              /* Ensure section titles are never cut off by navbar */
@@ -1030,35 +1503,41 @@
                  margin-top: 2rem;
              }
 
-           /* Premium Typography */
+           /* Premium Mobile Typography */
            .hero-title {
-               font-size: clamp(2.8rem, 8vw, 4.5rem);
-               line-height: 1.05;
-               letter-spacing: -0.03em;
+               font-size: var(--text-5xl);
+               line-height: var(--leading-tight);
+               letter-spacing: var(--tracking-tighter);
                margin-bottom: 1.5rem;
                font-weight: 900;
            }
+           
+           .hero-sub-title {
+               font-size: var(--text-3xl);
+               font-weight: 800;
+           }
+           
            .hero-subtitle {
-               font-size: 1.1rem;
+               font-size: var(--text-lg);
                margin-bottom: 2.5rem;
-               line-height: 1.5;
-               opacity: 0.9;
+               line-height: var(--leading-relaxed);
                max-width: 90%;
                margin-left: auto;
                margin-right: auto;
            }
+           
            .section-title {
-               font-size: clamp(2.2rem, 6vw, 3rem);
+               font-size: var(--text-4xl);
                margin-bottom: 1.5rem;
-               line-height: 1.1;
-               letter-spacing: -0.02em;
+               line-height: var(--leading-tight);
+               letter-spacing: var(--tracking-tight);
            }
+           
            .section-subtitle {
-               font-size: 1.05rem;
+               font-size: var(--text-lg);
                margin: 0 auto 3rem;
-               line-height: 1.6;
-               opacity: 0.8;
-               max-width: 85%;
+               line-height: var(--leading-relaxed);
+               max-width: 90%;
            }
 
              /* Premium Container and spacing */
@@ -1067,7 +1546,7 @@
              }
              /* Ensure other pages have proper top spacing */
              .page:not(#home) .container {
-                 padding: 120px 1.5rem 60px 1.5rem !important;
+                 padding: 100px 1.5rem 60px 1.5rem !important;
              }
              .hero-content {
                  padding: 2rem 1rem;
@@ -1136,18 +1615,19 @@
            .feature-card .icon {
                font-size: 2.5rem;
                margin-bottom: 2rem;
-               opacity: 0.9;
            }
+           
            .feature-card h3 {
-               font-size: 1.5rem;
+               font-size: var(--text-xl);
                margin-bottom: 1rem;
                font-weight: 700;
-               line-height: 1.3;
+               line-height: var(--leading-tight);
+               letter-spacing: var(--tracking-normal);
            }
+           
            .feature-card p {
-               font-size: 1.05rem;
-               line-height: 1.6;
-               opacity: 0.8;
+               font-size: var(--text-base);
+               line-height: var(--leading-relaxed);
            }
 
            /* Premium Schedule Timeline Design for Mobile */
@@ -1225,13 +1705,16 @@
                transform: scale(1.05);
            }
            .person-card h3 {
-               font-size: 1.4rem;
+               font-size: var(--text-xl);
                margin-bottom: 0.5rem;
                font-weight: 700;
+               line-height: var(--leading-tight);
+               letter-spacing: var(--tracking-normal);
            }
+           
            .person-card p {
-               font-size: 1rem;
-               opacity: 0.9;
+               font-size: var(--text-base);
+               line-height: var(--leading-normal);
            }
            
            /* Mobile Faculty Cards */
@@ -1240,20 +1723,23 @@
                margin-bottom: 0.75rem;
            }
            #committee-faculty .person-card h3 {
-               font-size: 1rem;
+               font-size: var(--text-base);
                margin-bottom: 0.25rem;
-               line-height: 1.2;
+               line-height: var(--leading-snug);
+               letter-spacing: var(--tracking-normal);
            }
+           
            #committee-faculty .person-card p {
-               font-size: 0.8rem;
-               opacity: 0.8;
+               font-size: var(--text-sm);
+               line-height: var(--leading-normal);
            }
 
            /* Premium Buttons */
            .btn {
                padding: 1rem 2.5rem;
-               font-size: 1rem;
+               font-size: var(--text-base);
                font-weight: 600;
+               letter-spacing: var(--tracking-wide);
                border-radius: 30px;
                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -1264,7 +1750,9 @@
            }
            .hero-cta .btn {
                padding: 1.2rem 3rem;
-               font-size: 1.1rem;
+               font-size: var(--text-lg);
+               font-weight: 600;
+               letter-spacing: var(--tracking-wide);
                box-shadow: 0 6px 20px rgba(56, 116, 255, 0.3);
            }
 
@@ -1279,12 +1767,17 @@
                margin-top: 3rem;
            }
            .footer-col h4 {
-               font-size: 1.4rem;
+               font-size: var(--text-2xl);
+               font-weight: 700;
+               line-height: var(--leading-tight);
+               letter-spacing: var(--tracking-normal);
                margin-bottom: 1.5rem;
            }
+           
            .footer-col p, .footer-col li {
-               font-size: 1.05rem;
-               line-height: 1.6;
+               font-size: var(--text-lg);
+               line-height: var(--leading-relaxed);
+               letter-spacing: var(--tracking-normal);
            }
            .footer-socials a {
                font-size: 1.8rem;
@@ -1328,12 +1821,15 @@
         @media (max-width: 480px) {
            /* Premium Extra small screens */
            .hero-title {
-               font-size: clamp(2.2rem, 7vw, 3.2rem);
-               line-height: 1.1;
+               font-size: var(--text-4xl);
+               line-height: var(--leading-tight);
+               letter-spacing: var(--tracking-tighter);
            }
+           
            .hero-subtitle {
-               font-size: 1rem;
+               font-size: var(--text-base);
                max-width: 95%;
+               line-height: var(--leading-relaxed);
            }
             #home .container {
                 padding: 50px 1rem;
@@ -1626,9 +2122,10 @@
                 <div id="aurora-blob"></div>
                 <div class="hero-content">
                 <h1 class="hero-title"> STARTUP SUMMIT 1.0</h1>
+                <h3 class="hero-sub-title">Innovate For Tomorrow</h3>
                 <br>
                 <p style="color: #cac7c7;"class="hero-subtitle">
-                    Welcome to <strong style="color:#fff">Startup Summit 1.0</strong>, a premier student-led initiative where innovation and entrepreneurship converge. The summit features our flagship events: the <strong style="color:#fff">Pravartan</strong> pre-summit workshop, the <strong style="color:#fff">Thalir</strong> pitching competition, and the <strong style="color:#fff"> Tharanga Sangamam </strong> panel speaker sessions. To empower our budding innovators, we are also hosting <strong style="color:#fff">BharatBuild</strong>, a low-code hackathon, and <strong style="color:#fff">FinSmart</strong>, a financial literacy workshop, both tailored exclusively for first and second-year students. <br><br> <strong style="color:#fff">Join us on this exciting journey to build the future, together!</strong>
+                    Welcome to <strong style="color:#fff">Startup Summit 1.0</strong> - a student-led celebration of ideas and enterprise, featuring workshops, competitions, and thought-provoking panels. With beginner-friendly hackathons and financial literacy sessions, the summit empowers tomorrow's innovators and entrepreneurs. <br><br> <strong style="color:#fff">Join us on this exciting journey to build the future, together!</strong>
                 </p>
                 <div class="hero-cta">
                     <a href="#registration" class="btn page-router">Register For Events <i class="fas fa-arrow-right"></i></a>
@@ -1636,7 +2133,7 @@
                 <br>
                 <br>
                 <div class="container" style="padding-top: 0;">
-    <section class="sponsors-section">
+    <!--<section class="sponsors-section">
         <h2 class="section-title">Our <span>Sponsors</span></h2>
         
             <div class="sponsor-category-box reveal">
@@ -1650,24 +2147,38 @@
                         <p>Title Sponsor</p>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="sponsor-category-box reveal">
-                <h3 class="committee-subheading">Associate Partners</h3>
+                <h3 class="committee-subheading">Powered By</h3>
                 <div class="sponsors-grid">
                     <div class="sponsor-card">
                         <div class="sponsor-logo-wrapper">
-                            <img src="https://via.placeholder.com/200x100/FFFFFF/000000?text=LOGO" alt="Sponsor Logo">
+                            <img src="photos/logo/Magic Tamil.png" alt="Sponsor Logo">
                         </div>
-                        <h4>Partner Name</h4>
-                        <p>Associate Partner</p>
+                        <h4>Magic 20</h4>
+                        <p>Knowledge Partner</p>
                     </div>
                     <div class="sponsor-card">
                         <div class="sponsor-logo-wrapper">
-                            <img src="https://via.placeholder.com/200x100/FFFFFF/000000?text=LOGO" alt="Sponsor Logo">
+                            <img src="photos/logo/gfg.jpeg" alt="GeeksforGeeks Logo">
                         </div>
-                        <h4>Partner Name</h4>
-                        <p>Associate Partner</p>
+                        <h4>GeeksforGeeks</h4>
+                        <p>Hackathon Partner</p>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                            <img src="photos/logo/uba.jpeg" alt="UBA Logo">
+                        </div>
+                        <h4>Unnat Bharat Abhiyan</h4>
+                        <p>Idea Partner</p>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                            <img src="photos/logo/Kreate Works.jpg" alt="Sponsor Logo">
+                        </div>
+                        <h4>Kreate Works</h4>
+                        <p>Innovation Partner</p>
                     </div>
                 </div>
             </div>
@@ -1686,46 +2197,59 @@
                 <div class="features-grid reveal">
                     <div class="card feature-card">
                         <div class="card-content">
-                            <div class="icon"><i class="fas fa-lightbulb"></i></div>
-                            <h3>Pravartan</h3>
-                            <p>An immersive pre-summit workshop that blends creative ideation, problem-solving exercises, and collaborative teamwork under experienced mentors' guidance.</p>
+                            <div class="card-content-main">
+                                <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                                <h3>Pravartan</h3>
+                                <p>An immersive pre-summit workshop that blends creative ideation, problem-solving exercises, and collaborative teamwork under experienced mentors' guidance.</p>
+                            </div>
+                            <button class="know-more-btn" onclick="openBrochure('pravartan')">Know More</button>
                         </div>
                     </div>
                      <div class="card feature-card">
                          <div class="card-content">
-                            <div class="icon"><i class="fas fa-seedling"></i></div>
-                            <h3>Thalir</h3>
-                            <p>A premier startup pitching event giving emerging innovators the stage to present groundbreaking concepts to investors, mentors, and industry leaders.</p>
+                            <div class="card-content-main">
+                                <div class="icon"><i class="fas fa-seedling"></i></div>
+                                <h3>Thalir</h3>
+                                <p>A premier startup pitching event giving emerging innovators the stage to present groundbreaking concepts to investors, mentors, and industry leaders.</p>
+                            </div>
+                            <button class="know-more-btn" onclick="openBrochure('thalir')">Know More</button>
                          </div>
                     </div>
                      <div class="card feature-card">
                         <div class="card-content">
-                            <div class="icon"><i class="fas fa-users"></i></div>
-                            <h3>Tharanga Sangamam</h3>
-                            <p>A two-day panel discussion bringing together voices from academia, industry, and the startup ecosystem for insightful exchanges on innovation.</p>
+                            <div class="card-content-main">
+                                <div class="icon"><i class="fas fa-users"></i></div>
+                                <h3>Tharanga Sangamam</h3>
+                                <p>A panel discussion bringing together voices from academia, industry, and the startup ecosystem for insightful exchanges on innovation.</p>
+                            </div>
+                            <button class="know-more-btn" onclick="openBrochure('tharangam')">Know More</button>
                         </div>
                     </div>
                      <div class="card feature-card">
                         <div class="card-content">
-                            <div class="icon"><i class="fas fa-code"></i></div>
-                            <h3>BharatBuild</h3>
-                            <p>A high-energy hackathon for 1st and 2nd year students to showcase problem-solving skills and creativity with minimal code.</p>
+                            <div class="card-content-main">
+                                <div class="icon"><i class="fas fa-code"></i></div>
+                                <h3>BharatBuild</h3>
+                                <p>A high-energy hackathon for 1st and 2nd year students to showcase problem-solving skills and creativity with minimal code.</p>
+                            </div>
                         </div>
                     </div>
                      <div class="card feature-card">
                         <div class="card-content">
-                            <div class="icon"><i class="fas fa-coins"></i></div>
-                            <h3>FinSmart</h3>
-                            <p>A practical money management and financial literacy workshop designed specifically for 1st and 2nd year students.</p>
+                            <div class="card-content-main">
+                                <div class="icon"><i class="fas fa-coins"></i></div>
+                                <h3>FinSmart</h3>
+                                <p>A practical money management and financial literacy workshop designed specifically for 1st and 2nd year students.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="metrics-grid reveal" style="margin-top: 6rem;">
-                    <div class="metric-item"><h3>500+</h3><p>Startups</p></div>
-                    <div class="metric-item"><h3>₹50Cr+</h3><p>Funding Pool</p></div>
-                    <div class="metric-item"><h3>2000+</h3><p>Students</p></div>
-                    <div class="metric-item"><h3>50+</h3><p>VCs & Angels</p></div>
+                    <div class="metric-item"><h3>2000+</h3><p>Expected footfall</p></div>
+                    <div class="metric-item"><h3>₹50K+</h3><p>Prizes and Rewards</p></div>
+                    <div class="metric-item"><h3>20+</h3><p>Alliances</p></div>
+                    <div class="metric-item"><h3>1L+</h3><p>Seed-Stage Support</p></div>
                 </div>
             </div>
         </section>
@@ -1791,15 +2315,16 @@
                 <h2 class="section-title">Event <span>Gallery</span></h2>
                 <p class="section-subtitle">A glimpse into the energy, connections, and innovation from our past events.</p>
                 <br>
-                <p class="section-subtitle" style="margin-top: 4rem;">Stay tuned for the updates...Coming Soon!</p>
-                <div class="gallery-grid" id="gallery-container">
-                    </div>
+                
+                <div id="gallery-container">
+                    <!-- Gallery will be rendered here -->
+                </div>
             </div>
         </section>
 
         <section id="registration" class="page">
              <div class="container">
-                <h2 class="section-title">Register for an <span>Event</span></h2>
+                <h2 class="section-title">Register for the <span>Events</span></h2>
                 <p class="section-subtitle">Choose an event below to secure your spot.</p>
                 <div class="events-grid" id="events-grid-container">
                     </div>
@@ -1918,7 +2443,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Ready to Transform Your Ideas?</h2>
                         <p>Join Pravartan and kickstart your entrepreneurial journey with hands-on learning and expert mentorship.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRzTNtcqksFQYmhyNAE2vvoI3fCv3O2ZE9-4vGaCQJjCwvrw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn register-btn">Register for Pravartan <i class="fas fa-external-link-alt"></i></a>
+                        <p style="text-align: center;" >Registrations Opening Soon, Stay Tuned!</p>
                     </div>
                 </div>
             </div>
@@ -1990,7 +2515,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Ready to Pitch Your Dream?</h2>
                         <p>Take your startup to the next level. Present your idea to investors and industry leaders at Thalir.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRzTNtcqksFQYmhyNAE2vvoI3fCv3O2ZE9-4vGaCQJjCwvrw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn register-btn">Register for Thalir <i class="fas fa-external-link-alt"></i></a>
+                        <p style="text-align: center;" >Registrations Opening Soon, Stay Tuned!</p>
                     </div>
                 </div>
             </div>
@@ -2097,7 +2622,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Join the Conversation</h2>
                         <p>Be part of meaningful discussions that shape the future of innovation and entrepreneurship.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRzTNtcqksFQYmhyNAE2vvoI3fCv3O2ZE9-4vGaCQJjCwvrw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn register-btn">Register for Panel Discussion <i class="fas fa-external-link-alt"></i></a>
+                        <p style="text-align: center;">Registrations Opening Soon, Stay Tuned!</p>
                     </div>
                 </div>
             </div>
@@ -2258,7 +2783,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Ready to Build the Future?</h2>
                         <p>Join BharatBuild and create innovative solutions without complex coding. Perfect for beginners!</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRzTNtcqksFQYmhyNAE2vvoI3fCv3O2ZE9-4vGaCQJjCwvrw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn register-btn">Register for BharatBuild <i class="fas fa-external-link-alt"></i></a>
+                        <p style="text-align: center;" >Registrations Opening Soon, Stay Tuned!</p>
                     </div>
                 </div>
             </div>
@@ -2268,41 +2793,71 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
             <div class="container">
                 <div class="event-detail-header">
                     <a href="#registration" class="back-link page-router"><i class="fas fa-arrow-left"></i> Back to Events</a>
-                    <h1 class="event-title">FinSmart</h1>
-                    <p class="event-subtitle">Money Management Workshop</p>
+                    <h1 class="event-title">FINSMART – THE MONEY MASTER CHALLENGE</h1>
+                    <p class="event-subtitle">Think like a founder. Spend like it’s your own money.</p>
                 </div>
                 
                 <div class="event-content">
                     <div class="event-overview">
-                        <h2>Overview</h2>
-                        <p>FinSmart is a comprehensive money management and financial literacy workshop designed specifically for 1st and 2nd year students. Learn essential financial skills, investment basics, budgeting techniques, and smart money habits that will set you up for lifelong financial success.</p>
+                        <p>As part of Startup Summit 1.0, we bring you FINSMART – THE MONEY MASTER CHALLENGE 💡 This team-based event gives participants a fixed virtual budget and a real-world rural challenge to solve. Teams craft smart financial blueprints, tackle surprise curveballs, and balance innovation, feasibility, and impact. Finally, they pitch their plan and defend every rupee spent. A fun, competitive way to sharpen teamwork, money management, and entrepreneurial problem-solving skills!</p>
                     </div>
 
                     <div class="event-details-grid">
                         <div class="detail-card">
                             <h3><i class="fas fa-calendar-alt"></i> When</h3>
                             <p>September 24, 2025</p>
-                            <p>1:30 PM - 6:00 PM</p>
+                            <p>12.30 PM to 4.00 PM</p>
                         </div>
                         
                         <div class="detail-card">
                             <h3><i class="fas fa-map-marker-alt"></i> Where</h3>
-                            <p>TP Mini Hall 1</p>
+                            <p>Mini Hall 2, TP Ganesan Auditorium</p>
                             <p>SRMIST, Chennai</p>
                         </div>
-                        
+                        <div class="detail-card">
+                            <h3><i class="fas fa-users"></i> Team Size</h3>
+                            <p>2-3 Members per Team</p>
+                            <p>Registration Fee: ₹250</p>
+                        </div>
                         <div class="detail-card">
                             <h3><i class="fas fa-users"></i> Target Audience</h3>
                             <p>1st & 2nd Year Students</p>
                             <p>All Departments Welcome</p>
                         </div>
                         
-                        <div class="detail-card">
-                            <h3><i class="fas fa-certificate"></i> Takeaways</h3>
-                            <p>Certificate of Completion</p>
-                            <p>Financial Planning Kit</p>
+                        
+                    </div>
+                    <div class="event-timeline">
+                        <h2>Event Schedule</h2>
+                        <div class="timeline-list">
+                            <div class="timeline-item">
+                                <span class="time">12:30 – 1:00 PM</span>
+                                <span class="event">Team registration and briefing</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="time">1:00 – 1:30 PM</span>
+                                <span class="event">Rural challenge reveal & budget allocation</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="time">1:30 – 2:45 PM</span>
+                                <span class="event">Planning and strategy building (with surprise challenges)</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="time">2:45 – 3:30 PM</span>
+                                <span class="event">Submission of financial blueprint</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="time">3:30 – 4:00 PM </span>
+                                <span class="event">Final team presentations & Q&A with judges</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="time">4:00 PM</span>
+                                <span class="event">Valedictory & Closing Remarks</span>
+                            </div>
+                            
                         </div>
                     </div>
+
 
                     <div class="event-modules">
                         <h2>Workshop Modules</h2>
@@ -2352,15 +2907,11 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                         </ul>
                     </div>
 
-                    <div class="event-speakers">
-                        <h2>Expert Facilitators</h2>
-                        <p>Learn from certified financial planners, investment advisors, and successful young entrepreneurs who will share practical insights and real-world experiences.</p>
-                    </div>
-
+                    
                     <div class="event-register">
                         <h2>Invest in Your Financial Future</h2>
                         <p>Take control of your finances early. Join FinSmart and build the foundation for lifelong financial success.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRzTNtcqksFQYmhyNAE2vvoI3fCv3O2ZE9-4vGaCQJjCwvrw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="btn register-btn">Register for FinSmart <i class="fas fa-external-link-alt"></i></a>
+                        <p style="text-align: center;" >Registrations Opening Soon, Stay Tuned!</p>
                     </div>
                 </div>
             </div>
@@ -2381,24 +2932,26 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <li><a href="#schedule" class="page-router">Schedule</a></li>
                     <li><a href="#speakers" class="page-router">Speakers</a></li>
                     <li><a href="#OrganizingComittee" class="page-router">Organizers</a></li>
-                    <li><a href="#Gallery" class="page-router">Gallery</a></li>
+                    <li><a hre
+                        3f="#Gallery" class="page-router">Gallery</a></li>
                     <li><a href="#registration" class="page-router">Register</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Contact Us</h4>
                 <ul>
-                    <li><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> summit@srmist.edu.in</li>
-                    <li><i class="fas fa-phone" style="margin-right: 0.5rem;"></i> +91 98765 43210</li>
+                    <li><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>startupsummit1.0@gmail.com</li>
+                    <li><i class="fas fa-phone-alt" style="margin-right: 0.5rem;"></i>Siddharth Ganesh: +91 9108750912</li>
+                    <li><i class="fas fa-phone-alt" style="margin-right: 0.5rem;"></i>Aryan Naresh Dayalani: +91 8262852424</li>
+                    <li><i class="fas fa-phone-alt" style="margin-right: 0.5rem;"></i>Aman Maskara: +91 9026550764</li>
+                    <li><i class="fas fa-phone-alt" style="margin-right: 0.5rem;"></i>Aarya Sawant: +91 8291224489</li>
                     <li><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i> SRMIST, Chennai</li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Follow Us</h4>
+                <h4>Connect with  us</h4>
                 <div class="footer-socials">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/startupsummit1.0?igsh=MWVhNmVwdzh4dHltMg=="><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -2422,7 +2975,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                 },
                 tharanga: {
                     name: "Tharanga Sangamam - Panel Discussion",
-                    description: "A two-day panel discussion bringing together voices from academia, industry, and the startup ecosystem for thought-provoking exchanges on innovation."
+                    description: "A panel discussion bringing together voices from academia, industry, and the startup ecosystem for thought-provoking exchanges on innovation  and insights that shape the future."
                 },
                 bharatbuild: {
                     name: "BharatBuild - Low Code Hackathon",
@@ -2444,9 +2997,9 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     { name: "Yashodhan Singh Rathore", title: "Creatives Head", image: "photos/student pics/yashodhan.jpg" },
                     { name: "Ayush Narania", title: "Web-Dev Head", image: "photos/student pics/ayush.jpg" },
                     { name: "Aarya Sawant", title: "Event Head", image: "photos/student pics/aarya.jpg" },
-                    { name: "Akshat Amit Danve", title: "Operations Head", image: "photos/student pics/akshat.png" },
+                    { name: "Akshat Amit Danve", title: "Operations Head", image: "photos/student pics/akshat2.jpg" },
                     { name: "Lucky Gupta", title: "Web-Dev Head", image: "photos/student pics/lucky.jpg" },
-                    { name: "Avaneesh Bastimane", title: "Logistics Head", image: "photos/student pics/jainish.jpg" },
+                    { name: "Avaneesh Bastimane", title: "Logistics Head", image: "photos/student pics/avaneesh.jpg" },
                     { name: "Mridul Nandyal", title: "Finance Head", image: "photos/student pics/mridul.jpg" },
                     { name: "Tejas Dumbhare", title: "Panel Discussion Head", image: "photos/student pics/tejas.jpg" },
                     { name: "Athira R Krishnan", title: "Hospitality Head", image: "photos/student pics/athira.png" },
@@ -2454,80 +3007,112 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     { name: "Chelva Lakshitha", title: "Content Head", image: "photos/student pics/chelva lakshitha 1.jpg" },
                     { name: "J. Cindrelaa", title: "Hospitality Head", image: "photos/student pics/cind 2 1.jpg" },
                     { name: "Asher Jacob", title: "Event Aide Head", image: "photos/student pics/asher.jpg" },
-                    { name: "koyena Majumdar", title: "Helpdesk Head", image: "photos/student pics/koyenya.jpg" },
+                    { name: "Koyena Majumdar", title: "Helpdesk Head", image: "photos/student pics/koyenya.jpg" },
                     { name: "Shubhankar Sarkar", title: "Anchoring Head", image: "photos/student pics/shubhankar.jpg" },
                     { name: "Naghul Pranav", title: "Workshop Head", image: "photos/student pics/naghul.jpg" },
-                    { name: "Jainish Jain", title: "Registrations Head", image: "photos/student pics/avaneesh.jpg" },
+                    { name: "Jainish Jain", title: "Registrations Head", image: "photos/student pics/jainish.jpg" },
                     { name: "Justin Pascal", title: "Social Media Head", image: "photos/student pics/justin.jpg" },
                     { name: "Pranav D Binu", title: "Guest Co-ordination Head", image: "photos/student pics/pranav.jpg" },
                     { name: "Riddhita Banerjee", title: "Documentation Head", image: "photos/student pics/riddhita.jpg" },
                     { name: "Himanshu Sharma", title: "General Aide Head", image: "photos/student pics/himanshu.jpg" },
                     { name: "Rahul Kumar Swain", title: "Guest Co-ordination Head", image: "photos/student pics/Rahul Kumar swain.jpg" },
-                    { name: "Aayushi Raj", title: "Hackathon Head", image: "" },
-                    { name: "Ayush Kumar", title: "Hackathon Head", image: "" }
-                    
+                    { name: "Aayushi Raj", title: "Hackathon Head", image: "photos/student pics/aayushi.png" },
+                    { name: "Ayush Kumar", title: "Hackathon Head", image: "photos/student pics/AyushK.jpg" },
+                    { name: "Sangat Singh", title: "Promotions Head", image: "photos/student pics/sangat.jpg" },
+                    { name: "Akshat Awasthi", title: "Promotions Head", image: "photos/student pics/awasthi.jpg" },
+                    { name: "Shaleen Soni", title: "E-Cell SRMIST Head", image: "photos/student pics/shaleen.png" },
+                    { name: "Manasi Bhargava", title: "E-Cell SRMIST-Non Technical Representative", image: "photos/student pics/Manasi.jpg" },
+                    { name: "Arihant Jain", title: "E-Cell SRMIST- Web-Dev Representative", image: "photos/student pics/arihant.png" },
+                    { name: "Evan Bryan", title: "E-Cell SRMIST - Corporate Representative", image: "photos/student pics/evan.png" },
+                    { name: "Subhasish Debnath", title: "E-Cell SRMIST - Outreach Representative", image: "photos/student pics/subhasish.png" }
                 ],
                 faculty: [
+                    //Patrons
+                    { name: "Shri T.R. Paarivendhar", title: "Founder Chancellor, SRMIST", category: "patron", image: "photos/patrons/Shri T.R. Paarivendhar1.jpg" },
+                    { name: "Dr. P. Ravi Pachamuthoo", title: "Pro Chancellor (Admin), SRMIST", category: "patron", image: "photos/patrons/Dr. P. Ravi Pachamuthoo.webp" },
+                    { name: "Dr. P. Sathyanarayanan", title: "Pro Chancellor (Academics), SRMIST", category: "patron", image: "photos/patrons/Dr. P. Sathyanarayanan1.jpg" },
+                    { name: "Dr. R. Shivakumar", title: "Chairman, SRMIST", category: "patron", image: "photos/patrons/Dr. R. Shivakumar1.jpg" },
+                    
+                    //Advisory Committee
+                    { name: "Dr. C. Muthamizhchelvan", title: "Vice Chancellor, SRMIST", category: "advisory", image: "photos/patrons/Dr. C. Muthamizhchelvan.jpg" },
+                    { name: "Dr. S. Ponnusamy", title: "Registrar, SRMIST", category: "advisory", image: "photos/Patrons/Dr. S. Ponnusamy1.jpg" },
+                    { name: "Dr. Leenus Jesu Martin M", title: "Dean, Faculty of Engineering and Technology, SRMIST", category: "advisory", image: "photos/patrons/Dr. Leenus Jesu Martin M.webp" },
+                    { name: "Dr. S S Sridhar", title: "Professor & Associate Dean (Academics - CET)", category: "advisory", image: "photos/patrons/Dr. S S Sridhar1.jpg" },
+                    { name: "Dr. Revathi Venkatraman", title: "Professor & Chair Person, SRMIST", category: "advisory", image: "photos/patrons/Dr. Revathi Venkatraman1.jpg" },
+                    { name: "Dr. M Pushpalatha", title: "Professor & Associate Chair Person, SRMIST", category: "advisory", image: "photos/patrons/Dr. M Pushpalatha.webp" },
+                    { name: "Dr. G. Niranjana", title: "Professor & HOD, CTech, SRMIST", category: "advisory", image: "photos/patrons/Dr. G. Niranjana.jpg" },
+
                     // Convenors
                     { name: "Dr. Divya Mohan", title: "", category: "convenor", image: "photos/faculty/Divya Mohan.jpg" },
                     { name: "Dr. Ponmagal R S", title: "", category: "convenor", image: "photos/faculty/Ponmagal mam.jpg" },
-                    { name: "Dr.Usha G", title: "", category: "convenor", image: "photos/faculty/Usha G.webp" },
-                    { name: "Dr. Suganiya M", title: "", category: "convenor", image: "photos/faculty/Suganiya.jpg" },
                     { name: "Dr. Dorathi Jayaseeli J D", title: "", category: "convenor", image: "photos/faculty/Dorathi.jpg" },
+                    { name: "Dr. Usha G", title: "", category: "convenor", image: "photos/faculty/Usha G.webp" },
+                    { name: "Dr. Suganiya M", title: "", category: "convenor", image: "photos/faculty/Suganiya.jpg" },
+                   
                     
                     
                     // Directorate Of Entrepreneurship and Innovation (DEI)
                     { name: "Dr. Shantanu Patil", title: "", category: "dei", image: "photos/faculty/shantanu.webp" },
                     { name: "Dr. Ananth Kumar", title: "", category: "dei", image: "photos/faculty/ananth.webp" },
-                    { name: "Ramesh Krishnamoorthy", title: "", category: "dei", image: "photos/faculty/ramesh.webp" },
+                    { name: "Dr. Ramesh Krishnamoorthy", title: "", category: "dei", image: "photos/faculty/ramesh.webp" },
                     
                     
 
                     // Co-Convenors
                     { name: "Dr.SS Saranya", title: "", category: "coconvenor", image: "photos/faculty/ss saranya.webp" },
-                    { name: "Dr. Mani Deepak", title: "", category: "coconvenor", image: "photos/faculty/Mani Deepak.jpg" },
-                    { name: "Dr.Thamizhamuthu", title: "", category: "coconvenor", image: "photos/faculty/Thamizhamuthu.jpg" },
-                    { name: "Dr. Sorna Lakshmi K", title: "", category: "coconvenor", image: "photos/faculty/sornalakshmi.jpg" },
-                    { name: "Dr. Deeba K", title: "", category: "coconvenor", image: "photos/faculty/deepa k.jpg" },
-                    { name: "Dr. Ajanthaa Lakshmanan", title: "", category: "coconvenor", image: "photos/faculty/Ajanthaa.jpg" },
-                    { name: "Dr. Sibi Amaran", title: "", category: "coconvenor", image: "photos/faculty/Sibi amaran.jpg" },
-                    { name: "Dr. Rajalakshmi M", title: "", category: "coconvenor", image: "photos/faculty/rajalakshmi.jpg" },
-                    { name: "Dr. Kanmani S", title: "", category: "coconvenor", image: "photos/faculty/Kanmani.jpg" },
-                    { name: "Dr. C Vijayakumaran", title: "", category: "coconvenor", image: "photos/faculty/vijayakumaran'.jpg" },
                     { name: "Dr. Priyadharshini K", title: "", category: "coconvenor", image: "photos/faculty/Priyadharshini.jpg" },
-                    { name: "Dr. Nithyakani", title: "", category: "coconvenor", image: "photos/faculty/Nithyakani.jpg" },
-                    { name: "Dr.Vinoth .N.A.S", title: "", category: "coconvenor", image: "photos/faculty/Vinoth nas.jpg" },
-                    { name: "Dr.M.Raanjani", title: "", category: "coconvenor", image: "" },
-                    { name: "Dr.Sornalakshmi", title: "", category: "coconvenor", image: "" },
+                    { name: "Dr. S Ashwini", title: "", category: "coconvenor", image: "photos/faculty/Ashwini S.png" },
+                    { name: "Dr. Deeba K", title: "", category: "coconvenor", image: "photos/faculty/deepa k.jpg" },
+                    { name: "Dr. Vinoth N.A.S", title: "", category: "coconvenor", image: "photos/faculty/Vinoth nas.jpg" },
                     { name: "Dr. Anbarasi A", title: "", category: "coconvenor", image: "photos/faculty/Anbarasi.jpg" },
-                    { name: "Nithya", title: "", category: "coconvenor", image: "photos/faculty/Nithya.jpg" },
+                    { name: "Dr.Thamizhamuthu", title: "", category: "coconvenor", image: "photos/faculty/Thamizhamuthu.jpg" },
+                    { name: "Dr. Ajanthaa Lakshmanan", title: "", category: "coconvenor", image: "photos/faculty/Ajanthaa.jpg" },
+                    { name: "Dr. Sreekumar K", title: "", category: "coconvenor", image: "photos/faculty/sreekumar k.png" },
+                    { name: "Dr. Selvaraj P", title: "", category: "coconvenor", image: "photos/faculty/selvaraj P.png" },
+                    { name: "Dr. Saravanan Santhanam", title: "", category: "coconvenor", image: "photos/faculty/saravanan.jpg" },
+                    { name: "Dr. Rajalakshmi M", title: "", category: "coconvenor", image: "photos/faculty/rajalakshmi.jpg" },
+                    { name: "Dr. S Nithya", title: "", category: "coconvenor", image: "photos/faculty/Nithya.jpg" },
+                    { name: "Dr. Sibi Amaran", title: "", category: "coconvenor", image: "photos/faculty/Sibi amaran.jpg" },
+                    { name: "Dr. C Vijayakumaran", title: "", category: "coconvenor", image: "photos/faculty/vijayakumaran'.jpg" },
+                    { name: "Dr. Ranjani M", title: "", category: "coconvenor", image: "photos/faculty/Ranjani M.png" },
                     { name: "Dr. Revathi M", title: "", category: "coconvenor", image: "photos/faculty/Revathi.jpg" },
-                    { name: "Dr.Sornalakshmi", title: "", category: "coconvenor", image: "" },
-                    { name: "Dr. Anbarasi A", title: "", category: "coconvenor", image: "photos/faculty/Anbarasi.jpg" },
+                    { name: "Dr. Nithyakani", title: "", category: "coconvenor", image: "photos/faculty/Nithyakani.jpg" },
+                    { name: "Dr. Nithiyanandam N", title: "", category: "coconvenor", image: "photos/faculty/nithyanandam.png" },
+                    { name: "Dr. Kanmani S", title: "", category: "coconvenor", image: "photos/faculty/Kanmani.jpg" },
+                    { name: "Dr. Sorna Lakshmi K", title: "", category: "coconvenor", image: "photos/faculty/sornalakshmi.jpg" },
+                    { name: "Dr. Mani Deepak", title: "", category: "coconvenor", image: "photos/faculty/Mani Deepak.jpg" },
+                    
+                    
+                    
+
 
                     // Coordinators
-                    { name: "Mrs. Bharani H", title: "", category: "coordinator", image: "photos/faculty/Bharani.jpg" },
+                    { name: "Dr. Swathi Mirthika GL", title: "", category: "coordinator", image: "photos/faculty/swathi.png" },
+                    { name: "Dr. Hemavathi D", title: "", category: "coordinator", image: "photos/faculty/hemavathi.png" },
                     { name: "Mrs. Jaya Poornima V", title: "", category: "coordinator", image: "photos/faculty/jaya poornima.jpg" },
                     { name: "Mrs. Selvameena P", title: "", category: "coordinator", image: "photos/faculty/selvameena.jpg" },
-                    { name: "Dr. Hemavathi D", title: "", category: "coordinator", image: "photos/faculty/selvameena.jpg" },
-                    { name: "Dr. Swathi Mirthika GL", title: "", category: "coordinator", image: "photos/faculty/selvameena.jpg" },
+                    { name: "Mrs. Bharani H", title: "", category: "coordinator", image: "photos/faculty/Bharani.jpg" },
+                    
+                    
+                    
+                    
 
                     // Professional Bodies
-                    { name: "R Minu Ma'am", title: "ACM-W", category: "professional", image: "" },
-                    { name: "Dr. Jayapradha J", title: "IEI", category: "professional", image: "photos\faculty\Jayapradha.jpg" },
-                    { name: "Suchitra Ma'am", title: "ACM Stud Chap", category: "professional", image: "" },
-                    { name: "Dr. Usha G", title: "AMIEE", category: "professional", image: "photos/faculty/Usha G.webp" },
-                    { name: "Dr. Dorathi Jayaseeli J D", title: "E-Cell SRM", category: "professional", image: "photos/faculty/Dorathi.jpg" }
+                     { name: "Dr. Dorathi Jayaseeli J D", title: "E-Cell SRM", category: "professional", image: "photos/faculty/Dorathi.jpg" },
+                    { name: "Dr. Minu R I", title: "ACM-W", category: "professional", image: "photos/faculty/meenu.png" },
+                    { name: "Dr. Jayapradha J", title: "IEI", category: "professional", image: "photos/faculty/Jayapradha.jpg" },
+                    { name: "Dr. Suchitra M", title: "ACM Student Chapter", category: "professional", image: "photos/faculty/suchitra.jpg" },
+                    { name: "Dr. Usha G", title: "AMIEE", category: "professional", image: "photos/faculty/Usha G.webp" }
+                   
                 ]
             },
             schedule: {
             all: [
                 { time: "Sept 19", title: "Pravartan", speaker: "Pre-Event Workshop", category: "workshop", venue: "DEI Department" },
                 { time: "Sept 23", title: "Inauguration", speaker: "Official start of the summit.", category: "keynote", venue: "TP Mini Hall 1" },
-                { time: "Sept 23", title: "Tharanga Sangamam - Day 1", speaker: "Panel Discussions 1 & 2", category: "panel", venue: "TP Mini Hall 1" },
+                { time: "Sept 23", title: "Tharanga Sangamam", speaker: "Panel Discussion", category: "panel", venue: "TP Mini Hall 1" },
                 { time: "Sept 23", title: "E-Cell IITM Session", speaker: "Insights from IITM E-Cell", category: "keynote", venue: "TP Ganesan Auditorium" },
                 { time: "Sept 23", title: "Thalir", speaker: "Startup Pitch Competition", category: "pitch", venue: "Turing Hall" },
-                { time: "Sept 24", title: "Tharanga Sangamam - Day 2", speaker: "Panel Discussions 3 & 4", category: "panel", venue: "TP Ganesan Auditorium" },
                 { time: "Sept 24", title: "FinSmart", speaker: "Money Management Workshop", category: "workshop", venue: "TP Mini Hall 1" },
                 { time: "Sept 24", title: "BharatBuild", speaker: "Low Code Hackathon", category: "hackathon", venue: "TP Mini Hall 2" },
                 { time: "Sept 24", title: "Valedictory", speaker: "Closing ceremony and prize distribution.", category: "keynote", venue: "TP Ganesan Auditorium" }
@@ -2540,15 +3125,24 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                 { time: "Sept 23", title: "Thalir", speaker: "Startup Pitch Competition", category: "pitch", venue: "Turing Hall" }
             ],
             panel: [ 
-                { time: "Sept 23", title: "Tharanga Sangamam - Day 1", speaker: "Panel Discussions 1 & 2", category: "panel", venue: "TP Mini Hall 1" },
-                { time: "Sept 24", title: "Tharanga Sangamam - Day 2", speaker: "Panel Discussions 3 & 4", category: "panel", venue: "TP Ganesan Auditorium"}
+                { time: "Sept 23", title: "Tharanga Sangamam ", speaker: "Panel Discussion", category: "panel", venue: "TP Mini Hall 1" },
+                
             ],
             hackathon: [
                 { time: "Sept 24", title: "BharatBuild", speaker: "Low Code Hackathon", category: "hackathon", venue: "TP Mini Hall 2" }
             ]
         },
-            filters: ["All Events", "Workshops", "Idea Pitch", "Panel Discussions", "Hackathon"],
+            filters: ["All Events", "Workshops", "Idea Pitch", "Panel Discussion", "Hackathon"],
             gallery: [
+                { src: "photos/gallery/logo1.jpg", category: "Logo" },
+                { src: "photos/gallery/logo2.jpg", category: "Logo" },
+                { src: "photos/gallery/logo3.jpg", category: "Logo" },
+                { src: "photos/gallery/logo4.jpg", category: "Logo" },
+                { src: "photos/gallery/UBA1.jpg", category: "UBA" },
+                { src: "photos/gallery/UBA2.jpg", category: "UBA" },
+                { src: "photos/gallery/UBA3.jpg", category: "UBA" },
+                { src: "photos/gallery/UBA4.jpg", category: "UBA" },
+                { src: "photos/gallery/UBA5.jpg", category: "UBA" },
                 
             ]
         };
@@ -2556,7 +3150,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
         const Templates = {
             personCard: (p) => `<div class="card person-card reveal"><div class="img-wrapper"><img src="${p.image && p.image.startsWith('photos/') ? p.image : `https://images.unsplash.com/photo-${p.image || '1535713875002-d1d0cf377fde'}?q=80&w=300&fit=crop&crop=faces`}" alt="${p.name}"></div><h3>${p.name}</h3>${p.title ? `<p>${p.title}</p>` : ''}</div>`,
             timelineItem: (s) => `<div class="schedule-timeline-item reveal" data-category="${s.category}"><div class="schedule-timeline-content"><div class="card"><span class="schedule-timeline-tag">${s.category.replace("-"," ").toUpperCase()} - ${s.time}</span><h3>${s.title}</h3><p><strong>Venue:</strong> ${s.venue || 'TBA'}</p><p>${s.speaker}</p></div></div></div>`,
-            galleryItem: (g) => `<div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-${g}?q=80&w=600" alt="Gallery Image"></div>`,
+            galleryItem: (g) => `<div class="gallery-item reveal"><img src="${g.src}" alt="Gallery Image"></div>`,
             filterButton: (f, i) => `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f.split(" ")[0].toLowerCase()}">${f}</button>`,
             eventCard: (event, eventKey) => `
                 <a href="#event-${eventKey}" class="card reveal page-router">
@@ -2581,6 +3175,8 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
             let html = '';
 
             const categoryOrder = [
+                { id: 'patron', title: 'Patrons' },
+                { id: 'advisory' , title: 'Advisory Committee'},
                 { id: 'convenor', title: 'Convenors' },
                 { id: 'dei', title: 'Directorate of Entrepreneurship and Innovation' },
                 { id: 'coconvenor', title: 'Co-Convenors' },
@@ -2602,11 +3198,42 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
 
             container.innerHTML = html;
         };
+
+        const renderGalleryWithSubheadings = () => {
+            const container = document.getElementById('gallery-container');
+            if (!container) return;
+
+            const galleryList = Data.gallery;
+            let html = '';
+
+            const categoryOrder = [
+                { id: 'Logo', title: 'Logo Release' },
+                { id: 'UBA' , title: 'Hackathon Pre-event Visit to UBA'}
+            ];
+
+            categoryOrder.forEach(category => {
+                const images = galleryList.filter(i => i.category === category.id);
+                if (images.length > 0) {
+                    html += `<div class="committee-category-box reveal">`;
+                    html += `<h3 class="committee-subheading">${category.title}</h3>`;
+                    html += `<div class="gallery-grid">`;
+                    html += images.map(Templates.galleryItem).join('');
+                    html += `</div>`;
+                    html += `</div>`;
+                }
+            });
+
+            container.innerHTML = html;
+        };
+
         
         render('speakers-container', Templates.personCard, Data.speakers);
         render('committee-students', Templates.personCard, Data.organizers.students);
         renderFacultyWithSubheadings();
-        render('gallery-container', Templates.galleryItem, Data.gallery);
+        renderGalleryWithSubheadings();
+        
+        
+
         
         // Render timeline items into separate containers for each filter
         render('timeline-all', Templates.timelineItem, Data.schedule.all);
@@ -2653,7 +3280,27 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
             const routerLink = e.target.closest('.page-router'); 
             if (routerLink) { 
                 e.preventDefault(); 
-                showPage(routerLink.getAttribute('href')); 
+                const href = routerLink.getAttribute('href');
+                console.log('Router click detected:', {
+                    element: routerLink,
+                    href: href,
+                    classes: routerLink.className,
+                    target: e.target
+                });
+                showPage(href); 
+            }
+        });
+
+        // Additional specific handler for back-link buttons
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.back-link') || e.target.closest('.back-link')) {
+                const backLink = e.target.matches('.back-link') ? e.target : e.target.closest('.back-link');
+                console.log('Back link clicked:', backLink);
+                e.preventDefault();
+                e.stopPropagation();
+                const href = backLink.getAttribute('href');
+                console.log('Navigating to:', href);
+                showPage(href);
             }
         });
         
@@ -2833,6 +3480,202 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
     }
 
   document.addEventListener('DOMContentLoaded', initThreeJSScene);
+
+  // Brochure modal functionality - Define globally BEFORE DOM ready
+  function openBrochure(eventName) {
+      console.log('openBrochure called with:', eventName);
+      
+      const modal = document.getElementById('brochureModal');
+      const modalImage = document.getElementById('modalImage');
+      
+      if (!modal || !modalImage) {
+          console.error('Modal elements not found - modal:', modal, 'modalImage:', modalImage);
+          alert('Error: Modal not found. Please refresh the page.');
+          return;
+      }
+      
+      let imagePath = '';
+      switch(eventName) {
+          case 'pravartan':
+              imagePath = 'photos/Pravartan.jpg';
+              break;
+          case 'thalir':
+              imagePath = 'photos/Thalir.jpg';
+              break;
+          case 'tharangam':
+              imagePath = 'photos/Tharangam.jpg';
+              break;
+          default:
+              alert('Brochure coming soon!');
+              return;
+      }
+      
+      console.log('Loading image:', imagePath);
+      modalImage.src = imagePath;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Add error handling for image loading
+      modalImage.onerror = function() {
+          alert('Error loading brochure image. Please check if the file exists.');
+          closeBrochure();
+      };
+      
+      modalImage.onload = function() {
+          console.log('Image loaded successfully');
+      };
+  }
+
+  function closeBrochure() {
+      const modal = document.getElementById('brochureModal');
+      if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+      }
+  }
+
+  // Also make them available on window for maximum compatibility
+  window.openBrochure = openBrochure;
+  window.closeBrochure = closeBrochure;
+
+  // Initialize modal event listeners when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded - initializing modal functionality');
+      
+      const modal = document.getElementById('brochureModal');
+      
+      if (modal) {
+          // Close modal when clicking outside the image
+          modal.addEventListener('click', function(e) {
+              if (e.target === this) {
+                  window.closeBrochure();
+              }
+          });
+      }
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+              window.closeBrochure();
+          }
+      });
+
+      // Check that all buttons are clickable and have proper onclick handlers
+      const knowMoreButtons = document.querySelectorAll('.know-more-btn');
+      console.log('Found', knowMoreButtons.length, 'know-more buttons');
+      
+      knowMoreButtons.forEach(function(button, index) {
+          const onclickValue = button.getAttribute('onclick');
+          console.log('Button', index, 'onclick:', onclickValue);
+          
+          // Ensure buttons are clickable
+          button.style.pointerEvents = 'auto';
+          button.style.cursor = 'pointer';
+          
+          // Add comprehensive event logging to debug
+          button.addEventListener('click', function(e) {
+              console.log('✅ CLICK EVENT REGISTERED on button', index);
+              console.log('Event details:', e);
+              console.log('Target:', e.target);
+              console.log('Current target:', e.currentTarget);
+          });
+          
+          button.addEventListener('mouseenter', function() {
+              console.log('🖱️ Mouse entered button', index);
+          });
+          
+          button.addEventListener('mouseleave', function() {
+              console.log('🖱️ Mouse left button', index);
+          });
+          
+          button.addEventListener('mousedown', function() {
+              console.log('⬇️ Mouse down on button', index);
+          });
+          
+          button.addEventListener('mouseup', function() {
+              console.log('⬆️ Mouse up on button', index);
+          });
+      });
+
+      // Test function for debugging - can be called from browser console
+      window.testBrochureModal = function() {
+          console.log('=== Testing Brochure Modal ===');
+          console.log('Modal element:', document.getElementById('brochureModal'));
+          console.log('Modal image element:', document.getElementById('modalImage'));
+          console.log('Know more buttons:', document.querySelectorAll('.know-more-btn'));
+          console.log('openBrochure function:', typeof window.openBrochure);
+          console.log('closeBrochure function:', typeof window.closeBrochure);
+          
+          // Test opening Pravartan brochure
+          console.log('Testing Pravartan brochure...');
+          window.openBrochure('pravartan');
+      };
+
+      // Comprehensive button test
+      window.testButtonClicks = function() {
+          console.log('=== Testing Button Clicks ===');
+          const buttons = document.querySelectorAll('.know-more-btn');
+          
+          buttons.forEach((button, index) => {
+              console.log(`Testing button ${index}:`);
+              console.log('- Element:', button);
+              console.log('- onclick:', button.getAttribute('onclick'));
+              console.log('- Style display:', getComputedStyle(button).display);
+              console.log('- Style pointer-events:', getComputedStyle(button).pointerEvents);
+              console.log('- Style z-index:', getComputedStyle(button).zIndex);
+              console.log('- ClientRect:', button.getBoundingClientRect());
+              console.log('- Parent element:', button.parentElement);
+              console.log('- Is visible:', button.offsetWidth > 0 && button.offsetHeight > 0);
+              
+              // Check if any element is covering the button
+              const rect = button.getBoundingClientRect();
+              const centerX = rect.left + rect.width / 2;
+              const centerY = rect.top + rect.height / 2;
+              const elementAtPoint = document.elementFromPoint(centerX, centerY);
+              console.log('- Element at button center:', elementAtPoint);
+              console.log('- Is button the top element?', elementAtPoint === button);
+              
+              // Try programmatic click
+              console.log('- Attempting programmatic click...');
+              button.click();
+          });
+      };
+
+      // Test Back to Events buttons specifically
+      window.testBackButtons = function() {
+          console.log('=== Testing Back to Events Buttons ===');
+          const backButtons = document.querySelectorAll('.back-link.page-router');
+          
+          backButtons.forEach((button, index) => {
+              console.log(`Testing back button ${index}:`);
+              console.log('- Element:', button);
+              console.log('- href:', button.getAttribute('href'));
+              console.log('- Classes:', button.className);
+              console.log('- Style display:', getComputedStyle(button).display);
+              console.log('- Style pointer-events:', getComputedStyle(button).pointerEvents);
+              console.log('- Style z-index:', getComputedStyle(button).zIndex);
+              console.log('- ClientRect:', button.getBoundingClientRect());
+              console.log('- Is visible:', button.offsetWidth > 0 && button.offsetHeight > 0);
+              
+              // Check if button is covered by another element
+              const rect = button.getBoundingClientRect();
+              const centerX = rect.left + rect.width / 2;
+              const centerY = rect.top + rect.height / 2;
+              const elementAtPoint = document.elementFromPoint(centerX, centerY);
+              console.log('- Element at button center:', elementAtPoint);
+              console.log('- Is button accessible?', elementAtPoint === button || button.contains(elementAtPoint));
+          });
+      };
+  });
 </script>
+
+<!-- Brochure Modal -->
+<div id="brochureModal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeBrochure()">&times;</button>
+        <img id="modalImage" class="modal-image" src="" alt="Event Brochure" />
+    </div>
+</div>
+
 </body>
 </html>
