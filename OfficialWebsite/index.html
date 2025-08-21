@@ -263,8 +263,8 @@
              font-feature-settings: "ss01" 1, "ss02" 1;
         }
          .nav-logo img {
-             height: 80px;
-             margin-bottom: 5px;
+             height: 85px;
+             margin-bottom: 15px;
              width: auto;
          }
         .nav-links { display: flex; list-style: none; gap: 2rem; }
@@ -864,10 +864,6 @@
             font-weight: 500;
             margin-bottom: 2rem;
             transition: color 0.3s ease;
-            position: relative;
-            z-index: 100;
-            cursor: pointer;
-            pointer-events: auto;
         }
         .back-link:hover {
             color: var(--accent-1);
@@ -2220,7 +2216,7 @@
                             <div class="card-content-main">
                                 <div class="icon"><i class="fas fa-users"></i></div>
                                 <h3>Tharanga Sangamam</h3>
-                                <p>A panel discussion bringing together voices from academia, industry, and the startup ecosystem for insightful exchanges on innovation.</p>
+                                <p>A two-day panel discussion bringing together voices from academia, industry, and the startup ecosystem for insightful exchanges on innovation.</p>
                             </div>
                             <button class="know-more-btn" onclick="openBrochure('tharangam')">Know More</button>
                         </div>
@@ -2296,15 +2292,15 @@
             <div class="container">
                 <h2 class="section-title">Meet the <span>Organizing Committee</span></h2>
                 <div class="committee-filters" id="committee-filters">
-                    <button class="filter-btn active" data-filter="students">Students</button>
-                    <button class="filter-btn" data-filter="faculty">Committee</button>
+                    <button class="filter-btn active" data-filter="faculty">Committee</button>
+                    <button class="filter-btn" data-filter="students">Students</button>
                 </div>
 
-                <div id="committee-students" class="team-grid committee-tab-content active">
+                <div id="committee-faculty" class="team-grid committee-tab-content active">
                     <!-- Student content is rendered here by the script -->
                 </div>
 
-                <div id="committee-faculty" class="committee-tab-content">
+                <div id="committee-students" class="team-grid committee-tab-content">
                     <!-- The new script will render categorized faculty members here -->
                 </div>
             </div>
@@ -2975,7 +2971,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                 },
                 tharanga: {
                     name: "Tharanga Sangamam - Panel Discussion",
-                    description: "A panel discussion bringing together voices from academia, industry, and the startup ecosystem for thought-provoking exchanges on innovation  and insights that shape the future."
+                    description: "A panel discussion bringing together voices from academia, industry, and the startup ecosystem for thought-provoking exchanges on innovation.                             "
                 },
                 bharatbuild: {
                     name: "BharatBuild - Low Code Hackathon",
@@ -3021,7 +3017,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     { name: "Sangat Singh", title: "Promotions Head", image: "photos/student pics/sangat.jpg" },
                     { name: "Akshat Awasthi", title: "Promotions Head", image: "photos/student pics/awasthi.jpg" },
                     { name: "Shaleen Soni", title: "E-Cell SRMIST Head", image: "photos/student pics/shaleen.png" },
-                    { name: "Manasi Bhargava", title: "E-Cell SRMIST-Non Technical Representative", image: "photos/student pics/manasi.jpg" },
+                    { name: "Manasi Bhargava", title: "E-Cell SRMIST-Non Technical Representative", image: "photos/student pics/Manasi.jpg" },
                     { name: "Arihant Jain", title: "E-Cell SRMIST- Web-Dev Representative", image: "photos/student pics/arihant.png" },
                     { name: "Evan Bryan", title: "E-Cell SRMIST - Corporate Representative", image: "photos/student pics/evan.png" },
                     { name: "Subhasish Debnath", title: "E-Cell SRMIST - Outreach Representative", image: "photos/student pics/subhasish.png" }
@@ -3035,7 +3031,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     
                     //Advisory Committee
                     { name: "Dr. C. Muthamizhchelvan", title: "Vice Chancellor, SRMIST", category: "advisory", image: "photos/patrons/Dr. C. Muthamizhchelvan.jpg" },
-                    { name: "Dr. S. Ponnusamy", title: "Registrar, SRMIST", category: "advisory", image: "photos/patrons/Dr. S. Ponnusamy1.jpg" },
+                    { name: "Dr. S. Ponnusamy", title: "Registrar, SRMIST", category: "advisory", image: "photos/Patrons/Dr. S. Ponnusamy1.jpg" },
                     { name: "Dr. Leenus Jesu Martin M", title: "Dean, Faculty of Engineering and Technology, SRMIST", category: "advisory", image: "photos/patrons/Dr. Leenus Jesu Martin M.webp" },
                     { name: "Dr. S S Sridhar", title: "Professor & Associate Dean (Academics - CET)", category: "advisory", image: "photos/patrons/Dr. S S Sridhar1.jpg" },
                     { name: "Dr. Revathi Venkatraman", title: "Professor & Chair Person, SRMIST", category: "advisory", image: "photos/patrons/Dr. Revathi Venkatraman1.jpg" },
@@ -3044,9 +3040,9 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
 
                     // Convenors
                     { name: "Dr. Divya Mohan", title: "", category: "convenor", image: "photos/faculty/Divya Mohan.jpg" },
-                    { name: "Dr. Ponmagal R S", title: "", category: "convenor", image: "photos/faculty/Ponmagal mam.jpg" },
                     { name: "Dr. Dorathi Jayaseeli J D", title: "", category: "convenor", image: "photos/faculty/Dorathi.jpg" },
-                    { name: "Dr. Usha G", title: "", category: "convenor", image: "photos/faculty/Usha G.webp" },
+                    { name: "Dr. Ponmagal R S", title: "", category: "convenor", image: "photos/faculty/Ponmagal mam.jpg" },
+                    { name: "Dr.Usha G", title: "", category: "convenor", image: "photos/faculty/Usha G.webp" },
                     { name: "Dr. Suganiya M", title: "", category: "convenor", image: "photos/faculty/Suganiya.jpg" },
                    
                     
@@ -3167,6 +3163,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
         const render = (containerId, template, data) => { const el = document.getElementById(containerId); if(el) el.innerHTML = data.map(template).join(''); };
         const renderObject = (containerId, template, data) => { const el = document.getElementById(containerId); if (el) el.innerHTML = Object.keys(data).map(key => template(data[key], key)).join(''); };
         
+        
         const renderFacultyWithSubheadings = () => {
             const container = document.getElementById('committee-faculty');
             if (!container) return;
@@ -3280,27 +3277,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
             const routerLink = e.target.closest('.page-router'); 
             if (routerLink) { 
                 e.preventDefault(); 
-                const href = routerLink.getAttribute('href');
-                console.log('Router click detected:', {
-                    element: routerLink,
-                    href: href,
-                    classes: routerLink.className,
-                    target: e.target
-                });
-                showPage(href); 
-            }
-        });
-
-        // Additional specific handler for back-link buttons
-        document.addEventListener('click', function(e) {
-            if (e.target.matches('.back-link') || e.target.closest('.back-link')) {
-                const backLink = e.target.matches('.back-link') ? e.target : e.target.closest('.back-link');
-                console.log('Back link clicked:', backLink);
-                e.preventDefault();
-                e.stopPropagation();
-                const href = backLink.getAttribute('href');
-                console.log('Navigating to:', href);
-                showPage(href);
+                showPage(routerLink.getAttribute('href')); 
             }
         });
         
@@ -3640,32 +3617,6 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
               button.click();
           });
       };
-
-      // Test Back to Events buttons specifically
-      window.testBackButtons = function() {
-          console.log('=== Testing Back to Events Buttons ===');
-          const backButtons = document.querySelectorAll('.back-link.page-router');
-          
-          backButtons.forEach((button, index) => {
-              console.log(`Testing back button ${index}:`);
-              console.log('- Element:', button);
-              console.log('- href:', button.getAttribute('href'));
-              console.log('- Classes:', button.className);
-              console.log('- Style display:', getComputedStyle(button).display);
-              console.log('- Style pointer-events:', getComputedStyle(button).pointerEvents);
-              console.log('- Style z-index:', getComputedStyle(button).zIndex);
-              console.log('- ClientRect:', button.getBoundingClientRect());
-              console.log('- Is visible:', button.offsetWidth > 0 && button.offsetHeight > 0);
-              
-              // Check if button is covered by another element
-              const rect = button.getBoundingClientRect();
-              const centerX = rect.left + rect.width / 2;
-              const centerY = rect.top + rect.height / 2;
-              const elementAtPoint = document.elementFromPoint(centerX, centerY);
-              console.log('- Element at button center:', elementAtPoint);
-              console.log('- Is button accessible?', elementAtPoint === button || button.contains(elementAtPoint));
-          });
-      };
   });
 </script>
 
@@ -3679,6 +3630,3 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
 
 </body>
 </html>
-
-
-
