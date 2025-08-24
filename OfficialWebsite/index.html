@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startup Summit 1.0 | Innovate for tomorrow</title>
+    <link rel="icon" href="photos/logo/favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     
@@ -804,7 +805,7 @@
 
         .sponsors-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 2rem;
             align-items: center;
             justify-items: center;
@@ -854,6 +855,7 @@
         .event-detail-header {
             text-align: center;
             margin-bottom: 4rem;
+            padding-top: 3rem; /* FIX: Pushes content down to clear fixed navbar */
         }
         .back-link {
             display: inline-flex;
@@ -2072,6 +2074,20 @@
         .panel-item.lunch-break p {
             color: rgba(255, 255, 255, 0.9);
         }
+
+        /* Add after .sponsors-grid styles */
+        .sponsors-grid-2x2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+        @media (max-width: 768px) {
+            .sponsors-grid-2x2 {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2129,22 +2145,8 @@
                 <br>
                 <br>
                 <div class="container" style="padding-top: 0;">
-    <!--<section class="sponsors-section">
-        <h2 class="section-title">Our <span>Sponsors</span></h2>
+    <section class="sponsors-section">
         
-            <div class="sponsor-category-box reveal">
-                <h3 class="committee-subheading">Title Sponsor</h3>
-                <div class="sponsors-grid">
-                    <div class="sponsor-card">
-                        <div class="sponsor-logo-wrapper">
-                            <img src="https://via.placeholder.com/200x100/FFFFFF/000000?text=LOGO" alt="Sponsor Logo">
-                        </div>
-                        <h4>Sponsor Name</h4>
-                        <p>Title Sponsor</p>
-                    </div>
-                </div>
-            </div>-->
-
             <div class="sponsor-category-box reveal">
                 <h3 class="committee-subheading">Powered By</h3>
                 <div class="sponsors-grid">
@@ -2164,7 +2166,16 @@
                     </div>
                     <div class="sponsor-card">
                         <div class="sponsor-logo-wrapper">
-                            <img src="photos/logo/uba.jpeg" alt="UBA Logo">
+                            <img src="photos/logo/Unstop-Logo-Blue-Medium.png" alt="Unstop Logo">
+                        </div>
+                        <h4>Unstop</h4>
+                        <p>Platform Partner</p>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                            <img style="max-height: 100%;"src="photos/logo/uba.jpeg" alt="UBA Logo">
                         </div>
                         <h4>Unnat Bharat Abhiyan</h4>
                         <p>Idea Partner</p>
@@ -2179,6 +2190,69 @@
                 </div>
             </div>
 
+            <div class="sponsor-category-box reveal">
+                <h3 class="committee-subheading">Jointly Organised By</h3>
+                <div class="sponsors-grid sponsors-grid-2x2">
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                            <img src="photos/logo/Original SRM LOGO.jpg" alt="SRM Logo">
+                        </div>
+                        <h4>SRMIST, Kattankulathur</h4>
+                    </div>
+                
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                           <img src="photos/logo/original soc logo.jpg" alt="SOC Logo">
+                        </div>
+                        <h4>School of Computing</h4>
+                
+                    </div>
+                    
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                            <img src="photos/logo/CTECH DEPT LOGO - (FINAL).jpg" alt="CTECH Logo">
+                        </div>
+                        <h4>Department of Computing Technologies</h4>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                           <img src="photos/logo/Dei logo.jpg" alt="DEI Logo">
+                        </div>
+                        <h4>Directorate of Entreprenuership and Innovation</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor-category-box reveal">
+                <h3 class="committee-subheading">Associated Professional Bodies</h3>
+                <div class="sponsors-grid sponsors-grid-2x2">
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                             <img src="photos/logo/Ecell logo.jpg" alt="E-cell Logo">
+                        </div>
+                        <h4>E-Cell SRMIST</h4>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                             <img src="photos/logo/iei logo.jpg" alt="IEI Logo">
+                        </div>
+                        <h4>IEI</h4>
+                    </div>
+                    <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                           <img src="photos/logo/ACM LOGO.jpg" alt="ACM Logo">
+                        </div>
+                        <h4>ACM</h4>
+                    </div>
+                     <div class="sponsor-card">
+                        <div class="sponsor-logo-wrapper">
+                           <img src="photos/logo/Aimee-logo 2.jpg" alt="AMIEE Logo">
+                        </div>
+                        <h4>AMIEE</h4>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </div>
             </div>
@@ -2228,6 +2302,7 @@
                                 <h3>BharatBuild</h3>
                                 <p>A high-energy hackathon for 1st and 2nd year students to showcase problem-solving skills and creativity with minimal code.</p>
                             </div>
+                            <button class="know-more-btn" onclick="openBrochure('bharatbuild')">Know More</button>
                         </div>
                     </div>
                      <div class="card feature-card">
@@ -2237,6 +2312,7 @@
                                 <h3>FinSmart</h3>
                                 <p>A practical money management and financial literacy workshop designed specifically for 1st and 2nd year students.</p>
                             </div>
+                            <button class="know-more-btn" onclick="openBrochure('finsmart')">Know More</button>
                         </div>
                     </div>
                 </div>
@@ -2321,7 +2397,7 @@
         <section id="registration" class="page">
              <div class="container">
                 <h2 class="section-title">Register for the <span>Events</span></h2>
-                <p class="section-subtitle">Choose an event below to secure your spot.</p>
+                <p class="section-subtitle">Choose an event below to secure your spot. All registrations and related matters will be handled on Unstop. </p>
                 <div class="events-grid" id="events-grid-container">
                     </div>
             </div>
@@ -2439,7 +2515,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Ready to Transform Your Ideas?</h2>
                         <p>Join Pravartan and kickstart your entrepreneurial journey with hands-on learning and expert mentorship.</p>
-                        <p style="text-align: center;" >Registrations Opening Soon, Stay Tuned!</p>
+                        <p style="text-align: center;" >Only Thalir'25 Finalists will be allowed to attend Pravartan. Participation in the Pravartan Capacity Building Workshop will automatically open for eligible candidates once the Thalir’25 finalists are announced. </p>
                     </div>
                 </div>
             </div>
@@ -2467,11 +2543,9 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                         
                         <div class="detail-card">
                             <h3><i class="fas fa-map-marker-alt"></i> Where</h3>
-                            <p>Turing Hall</p>
+                            <p>TP-2 702</p>
                             <p>SRMIST, Chennai</p>
                         </div>
-                        
-                                               
                         
                         <div class="detail-card">
                             <h3><i class="fas fa-users"></i> Team Size</h3>
@@ -2511,7 +2585,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Ready to Pitch Your Dream?</h2>
                         <p>Take your startup to the next level. Present your idea to investors and industry leaders at Thalir.</p>
-                        <p style="text-align: center;" >Registrations Opening Soon, Stay Tuned!</p>
+                        <a href="https://unstop.com/competitions/thalir25-startup-pitch-arena-startup-summit-10-srm-ktr-1545193" class="btn register-btn">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -2618,7 +2692,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Join the Conversation</h2>
                         <p>Be part of meaningful discussions that shape the future of innovation and entrepreneurship.</p>
-                        <p style="text-align: center;">Registrations Opening Soon, Stay Tuned!</p>
+                        <a href="https://unstop.com/workshops-webinars/tharanga-sangamam-startup-summit-10-srm-ktr-1545506" class="btn register-btn">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -2779,7 +2853,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Ready to Build the Future?</h2>
                         <p>Join BharatBuild and create innovative solutions without complex coding. Perfect for beginners!</p>
-                        <p style="text-align: center;" >Registrations Opening Soon, Stay Tuned!</p>
+                        <a href="https://unstop.com/p/bharatbuild-startup-summit-10-srm-ktr-1545328" class="btn register-btn">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -2907,7 +2981,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     <div class="event-register">
                         <h2>Invest in Your Financial Future</h2>
                         <p>Take control of your finances early. Join FinSmart and build the foundation for lifelong financial success.</p>
-                        <p style="text-align: center;" >Registrations Opening Soon, Stay Tuned!</p>
+                        <a href="https://unstop.com/p/finsmart-the-money-master-challenge-startup-summit-10-srm-ktr-1545475" class="btn register-btn">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -3031,7 +3105,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     
                     //Advisory Committee
                     { name: "Dr. C. Muthamizhchelvan", title: "Vice Chancellor, SRMIST", category: "advisory", image: "photos/patrons/Dr. C. Muthamizhchelvan.jpg" },
-                    { name: "Dr. S. Ponnusamy", title: "Registrar, SRMIST", category: "advisory", image: "photos/patrons/Dr. S. Ponnusamy1.jpg" },
+                    { name: "Dr. S. Ponnusamy", title: "Registrar, SRMIST", category: "advisory", image: "photos/Patrons/Dr. S. Ponnusamy1.jpg" },
                     { name: "Dr. Leenus Jesu Martin M", title: "Dean, Faculty of Engineering and Technology, SRMIST", category: "advisory", image: "photos/patrons/Dr. Leenus Jesu Martin M.webp" },
                     { name: "Dr. S S Sridhar", title: "Professor & Associate Dean (Academics - CET)", category: "advisory", image: "photos/patrons/Dr. S S Sridhar1.jpg" },
                     { name: "Dr. Revathi Venkatraman", title: "Professor & Chair Person, SRMIST", category: "advisory", image: "photos/patrons/Dr. Revathi Venkatraman1.jpg" },
@@ -3107,8 +3181,8 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                 { time: "Sept 19", title: "Pravartan", speaker: "Pre-Event Workshop", category: "workshop", venue: "DEI Department" },
                 { time: "Sept 23", title: "Inauguration", speaker: "Official start of the summit.", category: "keynote", venue: "TP Mini Hall 1" },
                 { time: "Sept 23", title: "Tharanga Sangamam", speaker: "Panel Discussion", category: "panel", venue: "TP Mini Hall 1" },
-                { time: "Sept 23", title: "E-Cell IITM Session", speaker: "Insights from IITM E-Cell", category: "keynote", venue: "TP Ganesan Auditorium" },
-                { time: "Sept 23", title: "Thalir", speaker: "Startup Pitch Competition", category: "pitch", venue: "Turing Hall" },
+                { time: "Sept 23", title: "E-Cell IITM Session", speaker: "Insights from IITM E-Cell", category: "keynote", venue: "Turing Hall" },
+                { time: "Sept 23", title: "Thalir", speaker: "Startup Pitch Competition", category: "pitch", venue: "TP-2 702" },
                 { time: "Sept 24", title: "FinSmart", speaker: "Money Management Workshop", category: "workshop", venue: "TP Mini Hall 1" },
                 { time: "Sept 24", title: "BharatBuild", speaker: "Low Code Hackathon", category: "hackathon", venue: "TP Mini Hall 2" },
                 { time: "Sept 24", title: "Valedictory", speaker: "Closing ceremony and prize distribution.", category: "keynote", venue: "TP Ganesan Auditorium" }
@@ -3118,7 +3192,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                 { time: "Sept 24", title: "FinSmart", speaker: "Money Management Workshop", category: "workshop", venue: "TP Mini Hall 1" }
             ],
             pitch: [ 
-                { time: "Sept 23", title: "Thalir", speaker: "Startup Pitch Competition", category: "pitch", venue: "Turing Hall" }
+                { time: "Sept 23", title: "Thalir", speaker: "Startup Pitch Competition", category: "pitch", venue: "TP-2 702" }
             ],
             panel: [ 
                 { time: "Sept 23", title: "Tharanga Sangamam ", speaker: "Panel Discussion", category: "panel", venue: "TP Mini Hall 1" },
@@ -3134,13 +3208,22 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                 { src: "photos/gallery/logo2.jpg", category: "Logo" },
                 { src: "photos/gallery/logo3.jpg", category: "Logo" },
                 { src: "photos/gallery/logo4.jpg", category: "Logo" },
+                { src: "photos/gallery/logo5.jpg", category: "Logo" },
+                { src: "photos/gallery/logo6.jpg", category: "Logo" },
                 { src: "photos/gallery/UBA1.jpg", category: "UBA" },
                 { src: "photos/gallery/UBA2.jpg", category: "UBA" },
                 { src: "photos/gallery/UBA3.jpg", category: "UBA" },
                 { src: "photos/gallery/UBA4.jpg", category: "UBA" },
+                { src: "photos/gallery/UBA6.jpg", category: "UBA" },
                 { src: "photos/gallery/UBA5.jpg", category: "UBA" },
-                
-            ]
+                { src: "photos/gallery/WL5.jpg", category: "WL" },
+                { src: "photos/gallery/WL2.jpg", category: "WL" },
+                { src: "photos/gallery/WL3.jpg", category: "WL" },
+                { src: "photos/gallery/WL4.jpg", category: "WL" },
+                { src: "photos/gallery/WL6.jpg", category: "WL" },
+                { src: "photos/gallery/WL1.jpg", category: "WL" },
+                
+            ]
         };
         
         const Templates = {
@@ -3183,7 +3266,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
 
             categoryOrder.forEach(category => {
                 const members = facultyList.filter(m => m.category === category.id);
-                if (members.length > 0) {
+                if ( members.length > 0) {
                     html += `<div class="committee-category-box reveal">`;
                     html += `<h3 class="committee-subheading">${category.title}</h3>`;
                     html += `<div class="team-grid">`;
@@ -3205,7 +3288,8 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
 
             const categoryOrder = [
                 { id: 'Logo', title: 'Logo Release' },
-                { id: 'UBA' , title: 'Hackathon Pre-event Visit to UBA'}
+                { id: 'UBA' , title: 'Hackathon Pre-event Visit to UBA'},
+                { id: 'WL' , title: 'Website Launch'}
             ];
 
             categoryOrder.forEach(category => {
@@ -3482,6 +3566,12 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
           case 'tharangam':
               imagePath = 'photos/Tharangam.jpg';
               break;
+          case 'bharatbuild':
+              imagePath = 'photos/BharatBuild.png';
+              break;
+          case 'finsmart':
+              imagePath = 'photos/FinSmart.png';
+              break;
           default:
               alert('Brochure coming soon!');
               return;
@@ -3630,4 +3720,3 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
 
 </body>
 </html>
-
