@@ -287,7 +287,7 @@
         /* CARD WITH GLOWING BORDER */
         .card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: var(--text-primary); }
         .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 16px; padding: 1px; background: var(--gradient-aurora); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; opacity: 0; transition: opacity 0.4s ease; pointer-events: none; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-color: transparent; }
         .card:hover::before { opacity: 1; }
 
         /* KNOW MORE BUTTON STYLES */
@@ -545,6 +545,84 @@
             line-height: var(--leading-normal);
         }
         
+        /* --- NEW SPEAKER ROW LAYOUT --- */
+        .speaker-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(105deg, rgba(56, 116, 255, 0.12) 0%, rgba(142, 68, 173, 0.06) 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .speaker-row::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 16px;
+            padding: 1px; /* Defines the border thickness */
+            background: var(--gradient-aurora);
+            -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .speaker-row:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border-color: transparent;
+        }
+        .speaker-row:hover::before {
+            opacity: 1;
+        }
+        .speaker-row-img {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .speaker-row-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .speaker-row-content {
+            flex-grow: 1;
+        }
+        .speaker-row-content h3 {
+            font-size: var(--text-2xl);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .speaker-row-content p.designation {
+            color: var(--accent-1);
+            font-size: var(--text-lg);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .speaker-row-content p.bio {
+            color: var(--text-secondary);
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+        }
+        /* Ensure speaker content is above the gradient border */
+        .speaker-row > * {
+            position: relative;
+            z-index: 1;
+        }
+
         #committee-faculty .person-card { padding: 1rem; }
         #committee-faculty .person-card .img-wrapper { width: 130px; margin-bottom: 0.75rem; }
         
@@ -1858,6 +1936,26 @@
                 padding: 1.5rem 1rem;
             }
 
+           /* --- NEW SPEAKER ROW LAYOUT (MOBILE) --- */
+           .speaker-row {
+               flex-direction: column;
+               align-items: center;
+               padding: 1.5rem;
+               text-align: center;
+           }
+           .speaker-row-img {
+               width: 120px;
+               height: 120px;
+               border-radius: 50%; /* Circle on mobile looks better */
+           }
+           .speaker-row-content h3 {
+               font-size: var(--text-xl);
+           }
+           .speaker-row-content p.designation {
+               font-size: var(--text-base);
+           }
+           /* --- END OF NEW SPEAKER ROW LAYOUT (MOBILE) --- */
+
            #committee-faculty .person-card .img-wrapper {
                width: 90px;
                margin-bottom: 0.5rem;
@@ -2367,11 +2465,207 @@
         <section id="speakers" class="page">
             <div class="container">
                 <h2 class="section-title">Featured <span>Speakers</span></h2>
-                <div class="team-grid" id="speakers-container">
-                    <!-- Speakers will be rendered here -->
+                <p class="section-subtitle">Meet the visionaries, innovators, and industry leaders who will be sharing their insights and experiences at Startup Summit 1.0.</p>
+
+                <div class="committee-category-box reveal">
+                    <h3 class="committee-subheading">Panel 1 : Funding the Future: Seed to Series</h3>
+                    <div>
+                        <!--<div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&fit=crop&crop=faces" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Dr. Mariappan Vaithilingam</h3>
+                                <p class="designation">Professor of Practice and Director of Bhramasive</p>
+                                <p class="bio">A short bio about the speaker, their expertise in funding, and their contributions to the startup ecosystem.</p>
+                            </div>
+                        </div>-->
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/subalalitha.jpg" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Dr. Subalalitha C N</h3>
+                                <p class="designation">Professor, Department of Computing Technologies, Faculty of Engineering & Technology, Kattankulathur</p>
+                                <p class="bio">Dr. Subalalitha C.N. is the Founder Director of FirstLanguage Technologies and a Professor at SRM, specializing in Natural Language Processing and Generative AI. A three-time research Gold Medalist and an NVIDIA DLI Ambassador, she is passionate about solving societal problems through Tamil Computing.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/arun.jpg" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Dr. J. Arun Kumar </h3>
+                                <p class="designation">Dean Innovation and Entrepreneurship,Dr APJ Abdul Kalam COE in Innovation and Entrepreneurship CEO Benzz Emerge Technology Foundation Dr MGR Educational and Research Institute</p>
+                                <p class="bio">Dr. J Arun Kumar is a leader in academic innovation, serving as the Dean of Innovation and Entrepreneurship at Dr. MGR Educational and Research Institute. He also drives technological advancement as the CEO of Benzz Emerge Technology Foundation, bridging the gap between institutional research and real-world enterprise.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/Hari.jpg" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Hari Baabu V</h3>
+                                <p class="designation">Associate Head Centre for Entrepreneurship, Kumaraguru Institutions.</p>
+                                <p class="bio">As the Associate Head of Entrepreneurship at Kumaraguru Institutions, he specializes in building innovation ecosystems by establishing and scaling incubation centers. A certified Innovation Ambassador, he leverages his AI background to mentor startups and bridge the gap between technology and new ventures.</p>
+                            </div>
+                        </div>
+                        
+
+                    </div>
                 </div>
-                <p class="section-subtitle" style="margin-top: 4rem;">Stay tuned for the updates... Coming Soon!</p>
-            </div>
+
+                <div class="committee-category-box reveal">
+                    <h3 class="committee-subheading">Panel 2 : The Founder's Diary: Lessons from the Field</h3>
+                    <div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/kartikeyan.jpg" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Karthikeyan Selvaraj</h3>
+                                <p class="designation">Co-Founder & CEO, Kreateworks India Pvt Ltd.</p>
+                                <p class="bio">Karthikeyan Selvaraj is the Co-Founder & CEO of Kreateworks, a global consulting firm, and serves as the President of the Indo-Netherlands Business Association. With three decades of senior HR leadership at global firms like Shell, GE, and Ford, he is a recognized expert in human capital management and multinational strategy.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/sumit.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Sumit Anand</h3>
+                                <p class="designation">Co-Founder, Rail Labs & Project Associate, CNDE-IIT Madras</p>
+                                <p class="bio">As the Co-founder & Chief of Staff at Rail Labs, an IIT Madras deep-tech venture, Sumit Anand is building cutting-edge AI solutions for railway inspection and predictive maintenance. A Project Associate at IITM's CNDE Lab, his mission is to leverage technology to redefine railway safety and reliability on a global scale.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/muthu.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Muthu Kumar S.H.</h3>
+                                <p class="designation">Founder of Vaan Megam Network</p>
+                                <p class="bio">A telecom entrepreneur with over 25 years of experience, Mr. Muthu Kumar S.H. is the Founder of Vaan Megam Networks and heads India’s first 5G Core Security Lab at IITM Pravartak. His career is marked by leadership at HCL-Cisco and Juniper, and he contributes to global standards while also having created the edtech platform, Mellifera.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/aswini.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Aswini Priyanka Rajendran </h3>
+                                <p class="designation">Founder & CEO of ASSR Emphorium</p>
+                                <p class="bio">Ms. Aswini Priyanka Rajendran is the award-winning Founder & CEO of ASSR Emphorium and a Certified Ethical Hacker with over 12 years of industry experience. A sought-after speaker and Gold Medalist from Anna University, she drives cybersecurity innovation and thought leadership across prestigious platforms like NITI AAYOG and IITM Pravartak.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/Srijan.jpg" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Srijan Tiwari </h3>
+                                <p class="designation">Co-Founder TIQWorld Pvt Ltd, IIT Madras Entrepreneurial Research Scholar</p>
+                                <p class="bio">As the Co-Founder of the IIT Madras-incubated venture TIQ World, he is pioneering a digital marketplace to revolutionize the NDE 4.0 and manufacturing quality industry. With an MS in Entrepreneurship from IIT Madras, he also serves as a dedicated mentor, conducting workshops in AI, ML, and Data Science.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="committee-category-box reveal">
+                    <h3 class="committee-subheading">Panel 3 : Green Disruption: Building Sustainable Startups</h3>
+                    <div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/Bharatiraja.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Dr. Bharatiraja C</h3>
+                                <p class="designation">Centre Head - Centre of Electric Mobility</p>
+                                <p class="bio">As the Head of the Centre for Electric Mobility at SRMIST, he is a globally recognized researcher ranked among the World's Top 2% of Scientists by Stanford University. Having secured over ₹15 Crores in grants, he spearheads innovation in EV technology, motor control, and charging infrastructure, while mentoring the next generation of engineers.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/anbu.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Anbumathi</h3>
+                                <p class="designation">Founder of Resources Lifescience & Head of Business Strategies of inDERMA Medical Devices</p>
+                                <p class="bio"> Being Founder of Resources Lifescience & Head of Business Strategies of inDERMA Medical Devices, Anbumathi is a seasoned Innovation Venture Catalyst and Design Thinking Expert. Recognized as a "Gems of Mentor" by NITI Aayog's Atal Innovation Mission, she applies a rigorous framework to help startups become scalable and investment-ready.</p>
+                            </div>
+                        </div>
+                        <!--<div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&fit=crop&crop=faces" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Eco-preneur Name</h3>
+                                <p class="designation">Founder of [Green Tech Company]</p>
+                                <p class="bio">A short bio on the speaker's work in sustainability, their innovative solutions, and their vision for a greener future.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&fit=crop&crop=faces" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Eco-preneur Name</h3>
+                                <p class="designation">Founder of [Green Tech Company]</p>
+                                <p class="bio">A short bio on the speaker's work in sustainability, their innovative solutions, and their vision for a greener future.</p>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+
+                <div class="committee-category-box reveal">
+                    <h3 class="committee-subheading">Panel 4 : Empowering Womenpreneurs</h3>
+                    <div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/Nisha.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Dr. Nisha Ashokan</h3>
+                                <p class="designation">Directorate of Student Affairs,SRMIST, Chennai</p>
+                                <p class="bio">Dr. Nisha Ashokan is an Assistant Professor in Economics and Entrepreneurship at SRMIST with nearly three decades of distinguished academic experience. Her career includes teaching at Hannam University in South Korea, with her research and mentorship focused on the fields of entrepreneurship and business.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/uma.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Dr. Uma Maheswari P</h3>
+                                <p class="designation">Chief Executive Officer AIC ACE, Amrita Vishwa Vidhyapeetham</p>
+                                <p class="bio">Dr. Uma Maheswari P is a pioneering startup ecosystem builder, having served as the first and former CEO of both TN RISE and the Anna Incubator. She is a proven leader in establishing successful incubators and shaping policies that foster innovation and support women's entrepreneurship at a national level.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/radha.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Radha Malini Rengachari</h3>
+                                <p class="designation">CEO at SPIKRA | Evangelist at Astravue</p>
+                                <p class="bio">Radha Malini Rengachari is a multi-passionate entrepreneur and the Founder & CEO of SPIKRA, a Thanjavur-based company focused on providing opportunities to rural youth. She is also the co-founder of the project profitability app Astravue, the host of the "Magic 20 Tamil" podcast, and the founder of Valar, a community for service-based business owners.</p>
+                            </div>
+                        </div>
+                        <div class="speaker-row">
+                            <div class="speaker-row-img">
+                                <img src="photos/speakers/saranya.png" alt="Speaker">
+                            </div>
+                            <div class="speaker-row-content">
+                                <h3>Saranya Selvapandiyaan</h3>
+                                <p class="designation">Founder Teamblue Part Time Jobs Private Limited </p>
+                                <p class="bio">As the founder of Part Timer, Saranya Selvapandiyaan is pioneering a first-of-its-kind gig economy platform in India to empower the nation's youth. An MBA from the National University of Singapore, her journey also includes co-founding the successful hospitality marketplace, Elitedining Private Limited.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                 <!--<p class="section-subtitle" style="margin-top: 4rem;">Full speaker lineup coming soon... Stay tuned for updates!</p>-->
+             </div>
         </section>
 
         <section id="OrganizingComittee" class="page">
@@ -3066,9 +3360,6 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                     description: "A practical money management and financial literacy workshop designed specifically for future investors and entrepreneurs."
                 }
             },
-            speakers: [
-                
-            ],
             organizers: {
                 students: [
                     { name: "Siddharth Ganesh", title: "Summit Head", image: "photos/student pics/siddharth.jpg" },
@@ -3255,7 +3546,6 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
         };
 
         const render = (containerId, template, data) => { const el = document.getElementById(containerId); if(el) el.innerHTML = data.map(template).join(''); };
-        const renderObject = (containerId, template, data) => { const el = document.getElementById(containerId); if (el) el.innerHTML = Object.keys(data).map(key => template(data[key], key)).join(''); };
         
         
         const renderFacultyWithSubheadings = () => {
@@ -3319,7 +3609,6 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
         };
 
         
-        render('speakers-container', Templates.personCard, Data.speakers);
         render('committee-students', Templates.personCard, Data.organizers.students);
         renderFacultyWithSubheadings();
         renderGalleryWithSubheadings();
@@ -3335,7 +3624,7 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
         render('timeline-hackathon', Templates.timelineItem, Data.schedule.hackathon);
         
         render('schedule-filters', Templates.filterButton, Data.filters);
-        renderObject('events-grid-container', Templates.eventCard, Data.events);
+        document.getElementById('events-grid-container').innerHTML = Object.keys(Data.events).map(key => Templates.eventCard(Data.events[key], key)).join('');
         
         const blob = document.getElementById("aurora-blob");
         if (blob) { window.addEventListener('pointermove', e => blob.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 3000, fill: "forwards" })); }
@@ -3731,6 +4020,3 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
 
 </body>
 </html>
-
-
-
