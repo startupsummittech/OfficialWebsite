@@ -769,6 +769,127 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.4);
         }
 
+        /* EVENT CAROUSEL STYLES */
+        .event-carousel-section {
+            margin: 4rem 0;
+            padding: 3rem 0;
+            position: relative;
+        }
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            background: var(--bg-card);
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(11, 11, 18, 0.95), transparent);
+            padding: 2rem;
+            border-radius: 0 0 20px 20px;
+        }
+        .carousel-caption h3 {
+            font-family: var(--font-display);
+            font-size: var(--text-2xl);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .carousel-caption p {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+        }
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(26, 26, 36, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        .carousel-nav:hover {
+            background: var(--accent-1);
+            border-color: var(--accent-1);
+            transform: translateY(-50%) scale(1.1);
+        }
+        .carousel-nav.prev {
+            left: 20px;
+        }
+        .carousel-nav.next {
+            right: 20px;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .carousel-indicator.active {
+            background: var(--accent-1);
+            width: 32px;
+            border-radius: 6px;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-slide img {
+                height: 300px;
+            }
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            .carousel-nav.prev {
+                left: 10px;
+            }
+            .carousel-nav.next {
+                right: 10px;
+            }
+            .carousel-caption {
+                padding: 1.5rem 1rem;
+            }
+            .carousel-caption h3 {
+                font-size: var(--text-lg);
+            }
+            .carousel-caption p {
+                font-size: var(--text-sm);
+            }
+        }
+
         /* --- ORGANIZING COMMITTEE SECTION STYLES --- */
         .committee-filters {
             display: flex;
@@ -2414,6 +2535,29 @@
             
         </section>
     </div>
+    
+                <!-- Event Photos Carousel -->
+                <div class="event-carousel-section reveal">
+                    <h2 class="section-title">Event <span>Highlights</span></h2>
+                    <p class="section-subtitle">Experience the energy and innovation from our signature events</p>
+                    
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper" id="carousel-wrapper">
+                            <!-- Carousel slides will be dynamically inserted here -->
+                        </div>
+                        
+                        <button class="carousel-nav prev" id="carousel-prev" aria-label="Previous Slide">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-nav next" id="carousel-next" aria-label="Next Slide">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="carousel-indicators" id="carousel-indicators">
+                        <!-- Indicators will be dynamically inserted here -->
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -3585,16 +3729,52 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                 { src: "photos/gallery/PS6.jpg", category: "PS" },
                 { src: "photos/gallery/PS7.jpg", category: "PS" },
                 { src: "photos/gallery/PS8.JPG", category: "PS" },
-                { src: "photos/gallery/PS9.jpg", category: "PS" }  
+                { src: "photos/gallery/PS9.jpg", category: "PS" },
                 
-                
-            ]
+                // Event Photos - Thalir
+                { src: "photos/events/thalir/1.jpg", category: "Thalir", placeholder: true },
+                { src: "photos/events/thalir/2.jpg", category: "Thalir", placeholder: true },
+                { src: "photos/events/thalir/3.jpg", category: "Thalir", placeholder: true },
+                { src: "photos/events/thalir/4.jpg", category: "Thalir", placeholder: true },
+                { src: "photos/events/thalir/5.jpg", category: "Thalir", placeholder: true },
+                { src: "photos/events/thalir/6.jpg", category: "Thalir", placeholder: true },
+                
+                // Event Photos - Tharanga Sangamam (placeholders)
+                { src: "photos/events/tharanga/1.jpg", category: "Tharanga", placeholder: true },
+                { src: "photos/events/tharanga/2.jpg", category: "Tharanga", placeholder: true },
+                { src: "photos/events/tharanga/3.jpg", category: "Tharanga", placeholder: true },
+                { src: "photos/events/tharanga/4.jpg", category: "Tharanga", placeholder: true },
+                { src: "photos/events/tharanga/5.jpg", category: "Tharanga", placeholder: true },
+                { src: "photos/events/tharanga/6.jpg", category: "Tharanga", placeholder: true },
+                
+                // Event Photos - BharatBuild (placeholders)
+                { src: "photos/events/bharatbuild/1.jpg", category: "BharatBuild", placeholder: true },
+                { src: "photos/events/bharatbuild/2.jpg", category: "BharatBuild", placeholder: true },
+                { src: "photos/events/bharatbuild/3.jpg", category: "BharatBuild", placeholder: true },
+                { src: "photos/events/bharatbuild/4.jpg", category: "BharatBuild", placeholder: true },
+                { src: "photos/events/bharatbuild/5.jpg", category: "BharatBuild", placeholder: true },
+                { src: "photos/events/bharatbuild/6.jpg", category: "BharatBuild", placeholder: true },
+                
+                // Event Photos - FinSmart (placeholders)
+                { src: "photos/events/finsmart/1.jpg", category: "FinSmart", placeholder: true },
+                { src: "photos/events/finsmart/2.jpg", category: "FinSmart", placeholder: true },
+                { src: "photos/events/finsmart/3.jpg", category: "FinSmart", placeholder: true },
+                { src: "photos/events/finsmart/4.jpg", category: "FinSmart", placeholder: true },
+                { src: "photos/events/finsmart/5.jpg", category: "FinSmart", placeholder: true },
+                { src: "photos/events/finsmart/6.jpg", category: "FinSmart", placeholder: true }
+            ],
+            carouselImages: [
+                { src: "photos/events/bharatbuild/1.jpg", title: "BharatBuild", description: "Low-code hackathon showcasing innovative solutions", placeholder: true },
+                { src: "photos/events/thalir/1.jpg", title: "Thalir", description: "Startup pitch competition with emerging innovators", placeholder: true },
+                { src: "photos/events/tharanga/1.jpg", title: "Tharanga Sangamam", description: "Panel discussions with industry leaders", placeholder: true },
+                { src: "photos/events/finsmart/1.jpg", title: "FinSmart", description: "Financial literacy workshop for students", placeholder: true }
+            ]
         };
         
         const Templates = {
             personCard: (p) => `<div class="card person-card reveal"><div class="img-wrapper"><img src="${p.image && p.image.startsWith('photos/') ? p.image : `https://images.unsplash.com/photo-${p.image || '1535713875002-d1d0cf377fde'}?q=80&w=300&fit=crop&crop=faces`}" alt="${p.name}"></div><h3>${p.name}</h3>${p.title ? `<p>${p.title}</p>` : ''}</div>`,
             timelineItem: (s) => `<div class="schedule-timeline-item reveal" data-category="${s.category}"><div class="schedule-timeline-content"><div class="card"><span class="schedule-timeline-tag">${s.category.replace("-"," ").toUpperCase()} - ${s.time}</span><h3>${s.title}</h3><p><strong>Venue:</strong> ${s.venue || 'TBA'}</p><p>${s.speaker}</p></div></div></div>`,
-            galleryItem: (g) => `<div class="gallery-item reveal"><img src="${g.src}" alt="Gallery Image"></div>`,
+            galleryItem: (g) => `<div class="gallery-item reveal"><img src="${g.src}" alt="${g.category} Gallery" onerror="this.style.background='linear-gradient(135deg, rgba(56, 116, 255, 0.1) 0%, rgba(142, 68, 173, 0.05) 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.minHeight='200px'; this.style.border='2px dashed var(--border-color)'; this.innerHTML='<div style=\\'text-align:center; padding:2rem; color:var(--text-secondary);\\' ><i class=\\'fas fa-image\\' style=\\'font-size:3rem; margin-bottom:1rem; opacity:0.3;\\'></i><p>${g.category}<br><small>Coming Soon</small></p></div>'; this.onerror=null;"></div>`,
             filterButton: (f, i) => `<button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${f.split(" ")[0].toLowerCase()}">${f}</button>`,
             eventCard: (event, eventKey) => `
                 <a href="#event-${eventKey}" class="card reveal page-router">
@@ -3654,7 +3834,11 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
                 { id: 'Logo', title: 'Logo Release' },
                 { id: 'UBA' , title: 'Hackathon Pre-event Visit to UBA'},
                 { id: 'WL' , title: 'Website Launch'},
-                { id: 'PS' , title: 'Promotional Roadshow'}
+                { id: 'PS' , title: 'Promotional Roadshow'},
+                { id: 'Thalir', title: 'Thalir - Startup Pitch Competition' },
+                { id: 'Tharanga', title: 'Tharanga Sangamam - Panel Discussion' },
+                { id: 'BharatBuild', title: 'BharatBuild - Hackathon' },
+                { id: 'FinSmart', title: 'FinSmart - Financial Literacy Workshop' }
             ];
 
             categoryOrder.forEach(category => {
@@ -3673,9 +3857,92 @@ Those who walk through Pravartan leave not just as participants but as pitch-rea
         };
 
         
+        // Initialize Event Carousel
+        const initCarousel = () => {
+            const wrapper = document.getElementById('carousel-wrapper');
+            const indicators = document.getElementById('carousel-indicators');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            
+            if (!wrapper || !indicators || !Data.carouselImages) return;
+            
+            let currentSlide = 0;
+            const totalSlides = Data.carouselImages.length;
+            
+            // Create carousel slides
+            wrapper.innerHTML = Data.carouselImages.map((img, index) => `
+                <div class="carousel-slide">
+                    <img src="${img.src}" alt="${img.title}" onerror="this.style.background='linear-gradient(135deg, rgba(56, 116, 255, 0.2) 0%, rgba(142, 68, 173, 0.1) 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<div style=\\'text-align:center; padding:3rem; color:var(--text-secondary);\\' ><i class=\\'fas fa-image\\' style=\\'font-size:4rem; margin-bottom:1.5rem; opacity:0.3;\\'></i><h3 style=\\'font-size:2rem; margin-bottom:0.5rem;\\'>${img.title}</h3><p>${img.description}<br><small>Photo Coming Soon</small></p></div>'; this.onerror=null;">
+                    <div class="carousel-caption">
+                        <h3>${img.title}</h3>
+                        <p>${img.description}</p>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Create indicators
+            indicators.innerHTML = Data.carouselImages.map((_, index) => 
+                `<div class="carousel-indicator ${index === 0 ? 'active' : ''}" data-slide="${index}"></div>`
+            ).join('');
+            
+            const updateCarousel = () => {
+                wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+                document.querySelectorAll('.carousel-indicator').forEach((ind, index) => {
+                    ind.classList.toggle('active', index === currentSlide);
+                });
+            };
+            
+            const nextSlide = () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            };
+            
+            const prevSlide = () => {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            };
+            
+            const goToSlide = (index) => {
+                currentSlide = index;
+                updateCarousel();
+            };
+            
+            // Event listeners
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            
+            // Indicator click handlers
+            document.querySelectorAll('.carousel-indicator').forEach((ind) => {
+                ind.addEventListener('click', () => {
+                    goToSlide(parseInt(ind.dataset.slide));
+                });
+            });
+            
+            // Auto-play carousel
+            let autoplayInterval = setInterval(nextSlide, 5000);
+            
+            // Pause on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', () => {
+                    clearInterval(autoplayInterval);
+                });
+                carouselContainer.addEventListener('mouseleave', () => {
+                    autoplayInterval = setInterval(nextSlide, 5000);
+                });
+            }
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            });
+        };
+        
         render('committee-students', Templates.personCard, Data.organizers.students);
         renderFacultyWithSubheadings();
         renderGalleryWithSubheadings();
+        initCarousel();
         
         
 
