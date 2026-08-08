@@ -7,7 +7,7 @@ export const Data = {
             name: "Pravartan",
             subtitle: "Agentic AI Workshop | Startup Summit 2.0 - TerraNext",
             unstopUrl: "https://unstop.com/p/pravartan-agentic-ai-workshop-startup-summit-20-srm-institute-of-science-and-technology-kattankulathur-chennai-1729867",
-            qrCode: "",
+            qrCode: "photos/qr/pravartan_qr.jpg",
             description: "An agentic AI workshop equipping aspiring innovators with hands-on AI tools, mindset, and skills needed for next-gen innovation.",
             overview: [
                 "Pravartan is the official Agentic AI workshop held as part of Startup Summit 2.0 - TerraNext, designed to equip aspiring innovators with the tools, mindset, and skills they need to build and pitch next-generation AI solutions.",
