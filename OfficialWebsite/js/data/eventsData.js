@@ -352,28 +352,28 @@ export const Data = {
     },
     schedule: {
         all: [
-            { time: "Sept 19", title: "Pravartan", speaker: "Agentic AI Workshop", category: "workshop", venue: "Turing Hall" },
-            { time: "Sept 23", title: "Inauguration", speaker: "Official start of the summit.", category: "keynote", venue: "TP Mini Hall 1" },
+            { time: "Sept 7, 2026", title: "Pravartan", speaker: "Agentic AI Workshop", category: "workshop", venue: "TP2 712" },
+            { time: "Sept 7, 2026", title: "Inauguration", speaker: "Official start of the summit.", category: "keynote", venue: "TP Mini Hall 1" },
             { time: "Sept 23", title: "Tharanga Sangamam", speaker: "Multidisciplinary Panel Discussion", category: "panel", venue: "TP Mini Hall 1" },
-            { time: "Sept 23", title: "Thalir'26", speaker: "Startup Pitch & Ideathon", category: "pitch", venue: "TP-2 702" },
-            { time: "Sept 24", title: "FinSmart", speaker: "Entrepreneurship Ideathon", category: "workshop", venue: "TP 401, TP 402" },
-            { time: "Sept 24", title: "Pasumai Hackathon", speaker: "Green & Sustainable Tech Hackathon", category: "hackathon", venue: "SRMIST Campus" },
-            { time: "Sept 24", title: "BharatBuild", speaker: "Low Code Hackathon", category: "hackathon", venue: "TP Mini Hall 2" },
+            { time: "Sept 7, 2026", title: "Thalir'26", speaker: "Startup Pitch & Ideathon", category: "pitch", venue: "TP-2 702" },
+            { time: "Sept 9, 2026", title: "FinSmart", speaker: "Entrepreneurship Ideathon", category: "workshop", venue: "TP2 712" },
+            { time: "Sept 9, 2026", title: "Pasumai Hackathon", speaker: "Green & Sustainable Tech Hackathon • Full day from 9:00 AM", category: "hackathon", venue: "SRMIST Campus KTR" },
+            { time: "Sept 8, 2026", title: "BharatBuild", speaker: "Low Code Hackathon • 9:00 AM - 4:30 PM", category: "hackathon", venue: "TP2 702" },
             { time: "Sept 24", title: "Valedictory", speaker: "Closing ceremony and prize distribution.", category: "keynote", venue: "TP Ganesan Auditorium" }
         ],
         workshop: [ 
-            { time: "Sept 19", title: "Pravartan", speaker: "Agentic AI Workshop", category: "workshop", venue: "Turing Hall" },
-            { time: "Sept 24", title: "FinSmart", speaker: "Entrepreneurship Ideathon", category: "workshop", venue: "TP 401, TP 402" }
+            { time: "Sept 7, 2026", title: "Pravartan", speaker: "Agentic AI Workshop", category: "workshop", venue: "Turing Hall" },
+            { time: "Sept 9, 2026", title: "FinSmart", speaker: "Entrepreneurship Ideathon", category: "workshop", venue: "TP2 712" }
         ],
         pitch: [ 
-            { time: "Sept 23", title: "Thalir'26", speaker: "Startup Pitch & Ideathon", category: "pitch", venue: "TP-2 702" }
+            { time: "Sept 7, 2026", title: "Thalir'26", speaker: "Startup Pitch & Ideathon", category: "pitch", venue: "TP-2 702" }
         ],
         panel: [ 
             { time: "Sept 23", title: "Tharanga Sangamam", speaker: "Multidisciplinary Panel Discussion", category: "panel", venue: "TP Mini Hall 1" }
         ],
         hackathon: [
-            { time: "Sept 24", title: "Pasumai Hackathon", speaker: "Green Tech Hackathon", category: "hackathon", venue: "SRMIST Campus" },
-            { time: "Sept 24", title: "BharatBuild", speaker: "Low Code Hackathon", category: "hackathon", venue: "TP Mini Hall 2" }
+            { time: "Sept 9, 2026", title: "Pasumai Hackathon", speaker: "Green & Sustainable Tech Hackathon • Full day from 9:00 AM", category: "hackathon", venue: "SRMIST Campus KTR" },
+            { time: "Sept 8, 2026", title: "BharatBuild", speaker: "Low Code Hackathon • 9:00 AM - 4:30 PM", category: "hackathon", venue: "TP2 702" }
         ]
     },
     filters: ["All Events", "Workshops", "Idea Pitch", "Panel Discussion", "Hackathon"],
