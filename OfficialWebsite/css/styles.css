@@ -2287,6 +2287,17 @@ body {
      }
  }
 
+ .associated-body-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.associated-body-single .sponsor-card {
+    margin: 0 auto;
+}
+
  /* QR Code Container Styles */
  .qr-code-container {
      margin-top: 1.5rem;

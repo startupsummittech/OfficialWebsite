@@ -5,12 +5,12 @@ export const Data = {
         pravartan: {
             id: "pravartan",
             name: "Pravartan",
-            subtitle: "Agentic AI Workshop | Startup Summit 2.0 - TerraNext",
+            subtitle: "Agentic AI Workshop | TerraNext - Startup Summit 2.0 - TerraNext",
             unstopUrl: "https://unstop.com/p/pravartan-agentic-ai-workshop-startup-summit-20-srm-institute-of-science-and-technology-kattankulathur-chennai-1729867",
             qrCode: "photos/qr/pravartan_qr.jpg",
             description: "An agentic AI workshop equipping aspiring innovators with hands-on AI tools, mindset, and skills needed for next-gen innovation.",
             overview: [
-                "Pravartan is the official Agentic AI workshop held as part of Startup Summit 2.0 - TerraNext, designed to equip aspiring innovators with the tools, mindset, and skills they need to build and pitch next-generation AI solutions.",
+                "Pravartan is the official Agentic AI workshop held as part of TerraNext - Startup Summit 2.0 - TerraNext, designed to equip aspiring innovators with the tools, mindset, and skills they need to build and pitch next-generation AI solutions.",
                 "This exclusive workshop brings hands-on exercises, expert mentorship, and practical AI applications. Participants learn to leverage autonomous agentic workflows and cutting-edge tech frameworks to solve complex challenges."
             ],
             detailsGrid: [
@@ -43,12 +43,12 @@ export const Data = {
         finsmart: {
             id: "finsmart",
             name: "FinSmart",
-            subtitle: "The Entrepreneurship Ideathon | Startup Summit 2.0 - TerraNext",
+            subtitle: "The Entrepreneurship Ideathon | TerraNext - Startup Summit 2.0 - TerraNext",
             unstopUrl: "https://unstop.com/p/finsmart-the-entrepreneurship-ideathon-startup-summit-20-srm-institute-of-science-and-technology-kattankulathur-chenna-1729827",
             qrCode: "photos/qr/finsmart_qr.jpg",
             description: "A team-based entrepreneurship ideathon and financial challenge where participants tackle real-world business blueprints and defend their budgets.",
             overview: [
-                "As part of Startup Summit 2.0 - TerraNext, FINSMART – THE ENTREPRENEURSHIP IDEATHON gives teams a virtual startup budget and real-world challenges to solve.",
+                "As part of TerraNext - Startup Summit 2.0 - TerraNext, FINSMART – THE ENTREPRENEURSHIP IDEATHON gives teams a virtual startup budget and real-world challenges to solve.",
                 "Teams craft smart financial blueprints, navigate economic curveballs, and balance innovation with commercial feasibility. Finally, participants pitch their strategy and defend their budget in front of expert judges."
             ],
             detailsGrid: [
@@ -76,7 +76,7 @@ export const Data = {
                 "Master startup financial modeling and unit economics from college itself.",
                 "Learn to make high-stakes business decisions under tight budget constraints.",
                 "Receive feedback from venture capitalists and financial strategy experts.",
-                "Win exciting cash prizes and recognition at Startup Summit 2.0."
+                "Win exciting cash prizes and recognition at TerraNext - Startup Summit 2.0."
             ],
             ctaTitle: "Invest in Your Entrepreneurial Mindset",
             ctaDescription: "Take control of startup finance and register for FinSmart on Unstop now."
@@ -84,7 +84,7 @@ export const Data = {
         tharanga: {
             id: "tharanga",
             name: "Tharanga Sangamam",
-            subtitle: "Multidisciplinary Panel Discussion | Startup Summit 2.0 - TerraNext",
+            subtitle: "Multidisciplinary Panel Discussion | TerraNext - Startup Summit 2.0 - TerraNext",
             unstopUrl: "https://unstop.com/p/tharanga-sangamam-a-multidisciplinary-panel-discussion-srm-institute-of-science-and-technology-kattankulathur-chennai-1729876",
             qrCode: "photos/qr/tharanga_qr.jpg",
             description: "A multidisciplinary panel discussion bringing together voices from academia, industry, and the tech ecosystem for impactful exchanges.",
@@ -115,12 +115,12 @@ export const Data = {
         pasumai: {
             id: "pasumai",
             name: "Pasumai Hackathon",
-            subtitle: "Green & Sustainable Tech Hackathon | Startup Summit 2.0 - TerraNext",
+            subtitle: "Green & Sustainable Tech Hackathon | TerraNext - Startup Summit 2.0 - TerraNext",
             unstopUrl: "https://unstop.com/p/pasumai-hackathon-startup-summit-20-srm-institute-of-science-and-technology-kattankulathur-chennai-1729884",
             qrCode: "photos/qr/pasumai_qr.jpg",
             description: "A flagship green tech hackathon focusing on sustainable solutions, climate technology, and eco-empowerment under TerraNext.",
             overview: [
-                "Pasumai Hackathon is the flagship environmental technology hackathon under Startup Summit 2.0 - TerraNext, empowering student innovators to engineer sustainable, climate-positive solutions.",
+                "Pasumai Hackathon is the flagship environmental technology hackathon under TerraNext - Startup Summit 2.0 - TerraNext, empowering student innovators to engineer sustainable, climate-positive solutions.",
                 "Participants tackle real-world green challenges across clean energy, waste management, circular economy, smart agriculture, and eco-friendly urban infrastructure."
             ],
             detailsGrid: [
@@ -165,7 +165,7 @@ export const Data = {
                 "Engineered scalable solutions for real environmental and sustainability challenges.",
                 "Receive guidance from green-tech pioneers, sustainability leaders, and incubators.",
                 "Compete for cash rewards, prizes, and TerraNext green startup support.",
-                "Get showcased on official Startup Summit 2.0 & SRMIST media platforms."
+                "Get showcased on official TerraNext - Startup Summit 2.0 & SRMIST media platforms."
             ],
             ctaTitle: "Engineer a Greener Tomorrow",
             ctaDescription: "Register your team for Pasumai Hackathon on Unstop and shape the future of sustainability."
@@ -173,12 +173,12 @@ export const Data = {
         thalir: {
             id: "thalir",
             name: "Thalir'26",
-            subtitle: "Startup Pitch & Ideathon | Startup Summit 2.0 - TerraNext",
+            subtitle: "Startup Pitch & Ideathon | TerraNext - Startup Summit 2.0 - TerraNext",
             unstopUrl: "https://unstop.com/p/thalir26-startup-pitch-ideathon-startup-summit-20-srm-institute-of-science-and-technology-kattankulathur-chennai-1729763",
             qrCode: "photos/qr/thalir_qr.jpg",
             description: "SRMIST's flagship startup pitch competition giving emerging student innovators the stage to present groundbreaking concepts.",
             overview: [
-                "Thalir'26 is SRMIST’s flagship startup pitch arena held as part of Startup Summit 2.0 - TerraNext, bringing together the most promising student founders to showcase game-changing ideas.",
+                "Thalir'26 is SRMIST’s flagship startup pitch arena held as part of TerraNext - Startup Summit 2.0 - TerraNext, bringing together the most promising student founders to showcase game-changing ideas.",
                 "This platform is dedicated to deep-tech, green-tech, AI, IoT, robotics, and social innovations that address real-world challenges and align with SDGs and government mission priorities."
             ],
             detailsGrid: [
@@ -202,7 +202,7 @@ export const Data = {
         bharatbuild: {
             id: "bharatbuild",
             name: "BharatBuild",
-            subtitle: "Low Code Hackathon | Startup Summit 2.0 - TerraNext",
+            subtitle: "Low Code Hackathon | TerraNext - Startup Summit 2.0 - TerraNext",
             unstopUrl: "https://unstop.com/p/bharatbuild-a-low-code-hackathon-srm-institute-of-science-and-technology-kattankulathur-chennai-1729858",
             qrCode: "photos/qr/bharatbuild_qr.jpg",
             description: "A high-energy hackathon for future techies to showcase problem-solving skills and creativity with minimal code for rural empowerment.",
