@@ -15,10 +15,10 @@ export const Data = {
             ],
             detailsGrid: [
                 { icon: "fas fa-robot", title: "Focus", val1: "Agentic AI & Next-Gen Automation", val2: "Hands-on Learning" },
-                { icon: "fas fa-calendar-alt", title: "When", val1: "September 2026", val2: "Workshop Session" },
-                { icon: "fas fa-map-marker-alt", title: "Where", val1: "Turing Hall, 8th Floor, TP-1", val2: "SRMIST, Chennai" },
-                { icon: "fas fa-users", title: "Who Can Attend", val1: "Students from all disciplines", val2: "AI Enthusiasts & Innovators" },
-                { icon: "fas fa-clock", title: "Duration", val1: "Intensive Hands-on Workshop", val2: "Interactive Mentorship" }
+                { icon: "fas fa-calendar-alt", title: "When", val1: "September 7, 2026", val2: "Workshop Session" },
+                { icon: "fas fa-map-marker-alt", title: "Where", val1: "TP2 712", val2: "SRMIST, Kattankulathur, Chennai" },
+                { icon: "fas fa-rupee-sign", title: "Registration Fee", val1: "₹150 per Participant", val2: "Individual Participation — Open to all disciplines" },
+                { icon: "fas fa-clock", title: "Duration", val1: "Intensive Hands-on Workshop", val2: "Certificates for all participants" }
             ],
             highlightsTitle: "The Workshop Experience",
             highlightsIntro: "Pravartan isn’t just another orientation — it’s an immersive deep dive into Agentic AI and startup execution. Participants will:",
@@ -53,9 +53,10 @@ export const Data = {
             ],
             detailsGrid: [
                 { icon: "fas fa-coins", title: "Format", val1: "Entrepreneurship Ideathon", val2: "Budget & Strategy Challenge" },
-                { icon: "fas fa-calendar-alt", title: "When", val1: "September 2026", val2: "Ideathon Session" },
-                { icon: "fas fa-map-marker-alt", title: "Where", val1: "TP 401, TP 402", val2: "SRMIST, Chennai" },
-                { icon: "fas fa-users", title: "Team Size", val1: "2-3 Members per Team", val2: "Open to All Departments" }
+                { icon: "fas fa-calendar-alt", title: "When", val1: "September 9, 2026", val2: "Ideathon Session" },
+                { icon: "fas fa-map-marker-alt", title: "Where", val1: "TP2 712", val2: "SRMIST, Kattankulathur, Chennai" },
+                { icon: "fas fa-users", title: "Team Size", val1: "2 Members per Team", val2: "Open to All Departments" },
+                { icon: "fas fa-trophy", title: "Prize Pool", val1: "₹9,500 Total Cash Prizes", val2: "₹5,000 / ₹3,000 / ₹1,500 + Goodies" }
             ],
             timeline: [
                 { time: "Phase 1", event: "Team registration & problem statement briefing" },
@@ -94,9 +95,10 @@ export const Data = {
             ],
             detailsGrid: [
                 { icon: "fas fa-users", title: "Format", val1: "Multidisciplinary Panel Discussion", val2: "Interactive Q&A Sessions" },
-                { icon: "fas fa-calendar-alt", title: "When", val1: "September 2026", val2: "Summit Panels" },
-                { icon: "fas fa-map-marker-alt", title: "Where", val1: "TP Mini Hall 1", val2: "SRMIST, Chennai" },
-                { icon: "fas fa-graduation-cap", title: "Audience", val1: "Open to all students, founders & faculty", val2: "Free Access with Registration" }
+                { icon: "fas fa-calendar-alt", title: "When", val1: "September 8, 2026", val2: "Summit Panels" },
+                { icon: "fas fa-map-marker-alt", title: "Where", val1: "TP Mini Hall 1", val2: "SRMIST, Kattankulathur, Chennai" },
+                { icon: "fas fa-users", title: "Team Size", val1: "Individual Registration", val2: "Open to all students, founders & faculty" },
+                { icon: "fas fa-graduation-cap", title: "Entry", val1: "Free Access with Registration", val2: "Limited seats — first-come, first-served" }
             ],
             extraSections: [
                 {
@@ -125,10 +127,11 @@ export const Data = {
             ],
             detailsGrid: [
                 { icon: "fas fa-leaf", title: "Focus", val1: "Green Tech & Sustainability", val2: "TerraNext Flagship" },
-                { icon: "fas fa-calendar-alt", title: "When", val1: "September 2026", val2: "Hackathon Challenge" },
-                { icon: "fas fa-map-marker-alt", title: "Where", val1: "SRMIST Campus", val2: "Kattankulathur, Chennai" },
-                { icon: "fas fa-users", title: "Team Size", val1: "1-4 Members per Team", val2: "All Departments Welcome" },
-                { icon: "fas fa-trophy", title: "Prizes", val1: "Rewards & Seed Mentorship", val2: "Incubation Opportunities" }
+                { icon: "fas fa-calendar-alt", title: "When", val1: "September 9, 2026", val2: "Hackathon Challenge" },
+                { icon: "fas fa-map-marker-alt", title: "Where", val1: "SRM KTR", val2: "Full day from 9:00 AM" },
+                { icon: "fas fa-users", title: "Team Size", val1: "1-3 Members per Team", val2: "All Departments Welcome" },
+                { icon: "fas fa-rupee-sign", title: "Registration Fee", val1: "₹300 per Team", val2: "Payable on Unstop" },
+                { icon: "fas fa-trophy", title: "Prize Pool", val1: "₹25,000 Total Cash Prizes", val2: "₹12,000 / ₹7,000 / ₹3,000 + Special Awards" }
             ],
             tracksIntro: "Choose a green technology track to innovate during Pasumai Hackathon:",
             tracks: [
@@ -183,9 +186,11 @@ export const Data = {
             ],
             detailsGrid: [
                 { icon: "fas fa-rocket", title: "Format", val1: "Startup Pitch & Ideathon", val2: "Jury Evaluation" },
-                { icon: "fas fa-calendar-alt", title: "When", val1: "September 2026", val2: "Pitch Arena" },
-                { icon: "fas fa-map-marker-alt", title: "Where", val1: "Tech Tower 702", val2: "SRMIST, Chennai" },
-                { icon: "fas fa-users", title: "Team Size", val1: "2-4 Members per Team", val2: "Registration via Unstop" }
+                { icon: "fas fa-calendar-alt", title: "When", val1: "September 7, 2026", val2: "8:00 AM - 5:00 PM IST" },
+                { icon: "fas fa-map-marker-alt", title: "Where", val1: "TP2 702", val2: "SRMIST, Kattankulathur, Chennai" },
+                { icon: "fas fa-users", title: "Team Size", val1: "1-3 Members per Team", val2: "Open to All Departments" },
+                { icon: "fas fa-rupee-sign", title: "Registration Fee", val1: "₹500 per Team", val2: "Confirms the offline pitch slot" },
+                { icon: "fas fa-trophy", title: "Prize Pool", val1: "₹22,000 Total Cash Prizes", val2: "₹12,000 / ₹7,000 / ₹3,000 + Incubation Support" }
             ],
             extraSections: [
                 {
@@ -212,10 +217,11 @@ export const Data = {
             ],
             detailsGrid: [
                 { icon: "fas fa-laptop-code", title: "Format", val1: "Low Code Hackathon", val2: "Prototyping Challenge" },
-                { icon: "fas fa-calendar-alt", title: "When", val1: "September 2026", val2: "8:00 AM - 3:30 PM" },
-                { icon: "fas fa-map-marker-alt", title: "Where", val1: "TP Mini Hall 2", val2: "SRMIST, Chennai" },
-                { icon: "fas fa-users", title: "Team Size", val1: "1-3 Members per Team", val2: "Beginner Friendly" },
-                { icon: "fas fa-trophy", title: "Prizes", val1: "Top Winner Cash Prizes", val2: "1st, 2nd & 3rd Places" }
+                { icon: "fas fa-calendar-alt", title: "When", val1: "September 8, 2026", val2: "9:00 AM - 4:30 PM" },
+                { icon: "fas fa-map-marker-alt", title: "Where", val1: "TP2 702", val2: "SRMIST, Kattankulathur, Chennai" },
+                { icon: "fas fa-users", title: "Team Size", val1: "2 Members per Team", val2: "Beginner Friendly" },
+                { icon: "fas fa-rupee-sign", title: "Registration Fee", val1: "₹200 per Team", val2: "Payable on Unstop" },
+                { icon: "fas fa-trophy", title: "Prize Pool", val1: "₹20,000 Total Cash Prizes", val2: "₹7,500 / ₹4,500 / ₹2,500 + Special Awards" }
             ],
             tracksIntro: "Participants choose one core track to build during BharatBuild:",
             tracks: [
@@ -354,10 +360,10 @@ export const Data = {
         all: [
             { time: "Sept 7, 2026", title: "Pravartan", speaker: "Agentic AI Workshop", category: "workshop", venue: "TP2 712" },
             { time: "Sept 7, 2026", title: "Inauguration", speaker: "Official start of the summit.", category: "keynote", venue: "TP2 712" },
-            { time: "Sept 8, 2026", title: "Tharanga Sangamam", speaker: "Multidisciplinary Panel Discussion", category: "panel", venue: "TP2 712" },
-            { time: "Sept 7, 2026", title: "Thalir'26", speaker: "Startup Pitch & Ideathon", category: "pitch", venue: "TP-2 702" },
+            { time: "Sept 8, 2026", title: "Tharanga Sangamam", speaker: "Multidisciplinary Panel Discussion", category: "panel", venue: "TP Mini Hall 1" },
+            { time: "Sept 7, 2026", title: "Thalir'26", speaker: "Startup Pitch & Ideathon • 8:00 AM - 5:00 PM", category: "pitch", venue: "TP2 702" },
             { time: "Sept 9, 2026", title: "FinSmart", speaker: "Entrepreneurship Ideathon", category: "workshop", venue: "TP2 712" },
-            { time: "Sept 9, 2026", title: "Pasumai Hackathon", speaker: "Green & Sustainable Tech Hackathon • Full day from 9:00 AM", category: "hackathon", venue: "SRMIST Campus KTR" },
+            { time: "Sept 9, 2026", title: "Pasumai Hackathon", speaker: "Green & Sustainable Tech Hackathon • Full day from 9:00 AM", category: "hackathon", venue: "SRM KTR" },
             { time: "Sept 8, 2026", title: "BharatBuild", speaker: "Low Code Hackathon • 9:00 AM - 4:30 PM", category: "hackathon", venue: "TP2 702" },
             { time: "Sept 9, 2026", title: "Valedictory", speaker: "Closing ceremony and prize distribution.", category: "keynote", venue: "TP2 712" }
         ],
@@ -366,13 +372,13 @@ export const Data = {
             { time: "Sept 9, 2026", title: "FinSmart", speaker: "Entrepreneurship Ideathon", category: "workshop", venue: "TP2 712" }
         ],
         pitch: [ 
-            { time: "Sept 7, 2026", title: "Thalir'26", speaker: "Startup Pitch & Ideathon", category: "pitch", venue: "TP2 702" }
+            { time: "Sept 7, 2026", title: "Thalir'26", speaker: "Startup Pitch & Ideathon • 8:00 AM - 5:00 PM", category: "pitch", venue: "TP2 702" }
         ],
         panel: [ 
-            { time: "Sept 8, 2026", title: "Tharanga Sangamam", speaker: "Multidisciplinary Panel Discussion", category: "panel", venue: "TP2 712" }
+            { time: "Sept 8, 2026", title: "Tharanga Sangamam", speaker: "Multidisciplinary Panel Discussion", category: "panel", venue: "TP Mini Hall 1" }
         ],
         hackathon: [
-            { time: "Sept 9, 2026", title: "Pasumai Hackathon", speaker: "Green & Sustainable Tech Hackathon • Full day from 9:00 AM", category: "hackathon", venue: "SRMIST Campus KTR" },
+            { time: "Sept 9, 2026", title: "Pasumai Hackathon", speaker: "Green & Sustainable Tech Hackathon • Full day from 9:00 AM", category: "hackathon", venue: "SRM KTR" },
             { time: "Sept 8, 2026", title: "BharatBuild", speaker: "Low Code Hackathon • 9:00 AM - 4:30 PM", category: "hackathon", venue: "TP2 702" }
         ]
     },
