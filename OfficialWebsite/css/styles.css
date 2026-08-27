@@ -1434,28 +1434,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 3.5rem 1.5rem 1.5rem;
     animation: fadeIn 0.3s ease-out;
 }
 .modal-content {
     position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
+    display: flex;
     background: transparent;
     border-radius: 10px;
-    overflow: hidden;
     animation: scaleIn 0.3s ease-out;
 }
+/* Posters are portrait (A4, 1:1.414). Sizing by BOTH axes with object-fit:contain
+   guarantees the whole poster fits on screen with nothing cropped. */
 .modal-image {
-    width: 100%;
+    display: block;
+    width: auto;
     height: auto;
-    max-width: 100%;
-    max-height: 90vh;
+    max-width: calc(100vw - 3rem);
+    max-height: calc(100vh - 5rem);
     object-fit: contain;
     border-radius: 10px;
 }
 .close-modal {
     position: absolute;
-    top: -40px;
+    top: -44px;
     right: 0;
     background: rgba(255, 255, 255, 0.9);
     border: none;
@@ -1481,6 +1483,20 @@ body {
 @keyframes scaleIn {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .modal.active {
+        padding: 3rem 0.75rem 0.75rem;
+    }
+    .modal-image {
+        max-width: calc(100vw - 1.5rem);
+        max-height: calc(100vh - 3.75rem);
+    }
+    .close-modal {
+        top: -40px;
+        right: 0.25rem;
+    }
 }
 
 /* Mobile Responsive for Event Pages */
