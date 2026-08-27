@@ -336,19 +336,22 @@ window.openBrochure = function(eventName) {
     let imagePath = '';
     switch(eventName) {
         case 'pravartan':
-            imagePath = 'photos/Pravartan.jpg';
+            imagePath = 'photos/Pravartan.png';
             break;
         case 'thalir':
-            imagePath = 'photos/Thalir.jpg';
+            imagePath = 'photos/Thalir.png';
             break;
         case 'tharangam':
-            imagePath = 'photos/Tharangam.jpg';
+            imagePath = 'photos/Tharanga Sangamam.png';
             break;
         case 'bharatbuild':
-            imagePath = 'photos/BharatBuildNew.jpg';
+            imagePath = 'photos/Bharat Build.png';
             break;
         case 'finsmart':
             imagePath = 'photos/FinSmart.png';
+            break;
+        case 'pasumai':
+            imagePath = 'photos/Pasumai.png';
             break;
         default:
             alert('Brochure coming soon!');
